@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kotlin Hub</string>
+
+    <!--button names-->
+    <string name="btn_log_in">Log in to the hub</string>
+
+    <!--text field names-->
+    <string name="tf_username">User Name</string>
+    <string name="tf_password">Password</string>
+</resources>
