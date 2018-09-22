@@ -7,4 +7,7 @@
     <!--text field names-->
     <string name="tf_username">User Name</string>
     <string name="tf_password">Password</string>
+
+    <!--just text-->
+    <string name="txt_forget_password">Forget password</string>
 </resources>

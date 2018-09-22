@@ -50,6 +50,16 @@
             tools:layout_editor_absoluteX="147dp"
             tools:layout_editor_absoluteY="177dp" />
 
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_forget_password"
+            android:clickable="true"
+            />
+
     </LinearLayout>
 
 </LinearLayout>
