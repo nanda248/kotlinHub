@@ -25,6 +25,7 @@
             android:screenOrientation="portrait"
             ></activity>
         <activity android:name=".activities.ActivityTestReadText"></activity>
+        <activity android:name=".ActivityTestReadText"></activity>
     </application>
 
 </manifest>
