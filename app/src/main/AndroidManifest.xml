@@ -24,7 +24,7 @@
         <activity android:name=".activities.user_home"
             android:screenOrientation="portrait"
             ></activity>
-        <activity android:name=".ActivityTestReadText"></activity>
+        <activity android:name=".activities.ActivityTestReadText"></activity>
     </application>
 
 </manifest>
