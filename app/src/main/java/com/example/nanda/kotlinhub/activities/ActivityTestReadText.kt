@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.TextView
 import com.example.nanda.kotlinhub.R
-import com.example.nanda.kotlinhub.helper.JSONLoading
+import com.example.nanda.kotlinhub.helper.JSONHelper
+import com.example.nanda.kotlinhub.helper.Section
 
 class ActivityTestReadText : AppCompatActivity() {
 
@@ -13,37 +14,44 @@ class ActivityTestReadText : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_read_text)
 
-        val tv = findViewById<TextView>(R.id.tv1)
         val btnGetJson = findViewById<Button>(R.id.btn1)
-        btnGetJson.setOnClickListener{
-            JSONLoading(this, "topic_1", tv).execute()
+        btnGetJson.setOnClickListener {
+            var jsonHelper = JSONHelper("topic_1", this)
+            var topic1: ArrayList<Section> = jsonHelper.parse()
+            display(topic1)
         }
 
     }
 
-    /*fun getJsonFile(){
-        val inputStream: InputStream = resources.openRawResource(R.raw.test)
-        val bis = BufferedInputStream(inputStream)
-        val br  = BufferedReader(InputStreamReader(bis))
-        val jsonData = StringBuffer()
-        var line: String?
+    private fun display(topic: ArrayList<Section>){
 
-        do {
-            line = br.readLine()
-            if (line == null) {
-                break
+        if(topic.size > 0) {
+            val section1 = topic[0]
+            val title = section1.getSectionTitle()
+            val content = section1.getContent()
+            val code = section1.getCode()
+
+            var contentString = ""
+            for(i in 0 until content.size){
+                contentString = contentString + content[i] + "\n" + "\n"
             }
-            jsonData.append(line + "\n")
 
-        } while (true)
+            val tvTitle = findViewById<TextView>(R.id.tv_title)
+            val tvContent = findViewById<TextView>(R.id.tv_content)
 
-        br.close()
-        bis.close()
-        var data = jsonData.toString()
+            tvTitle.text = title
+            tvContent.text = contentString
 
+            if(code.size>0) {
+                var codeString = ""
+                for (j in 0 until code.size) {
+                    codeString = codeString + code[j] + "\n"
+                }
+                val tvCode = findViewById<TextView>(R.id.tv_code)
+                tvCode.text = codeString
+                tvCode.setBackgroundResource(R.color.grey)
+            }
+
+        }
     }
-
-    fun parseJsonData(){
-
-    }*/
 }
