@@ -14,7 +14,7 @@ class ActivityTopic1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topic1)
 
-        var jsonHelper = JSONHelper("topic_1", this)
+        var jsonHelper = JSONHelper("topic_2", this)
         var topic1: ArrayList<Section> = jsonHelper.parse()
         var section1 = topic1[0]
 
@@ -39,9 +39,10 @@ class ActivityTopic1 : AppCompatActivity() {
         val title = section.getSectionTitle()
 
         var contentString = ""
-        for(i in 0 until content.size){
+        for(i in 0 until content.size-1){
             contentString = contentString + content[i] + "\n" + "\n"
         }
+        contentString = contentString + content[content.size-1] + "\n"
 
         val tvTitle = findViewById<TextView>(R.id.tv_title)
         val tvContent = findViewById<TextView>(R.id.tv_content)
@@ -51,12 +52,14 @@ class ActivityTopic1 : AppCompatActivity() {
 
         if(code.size>0) {
             var codeString = ""
-            for (j in 0 until code.size) {
+            for (j in 0 until code.size-1) {
+                codeString += "   "
                 codeString = codeString + code[j] + "\n"
             }
+            codeString = codeString + "   " + code[code.size-1]
             val tvCode = findViewById<TextView>(R.id.tv_code)
             tvCode.text = codeString
-            tvCode.setBackgroundResource(R.color.grey)
+            tvCode.setBackgroundResource(R.drawable.code_border)
         }
     }
 }
