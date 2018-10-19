@@ -3,8 +3,18 @@
 
     <!--button names-->
     <string name="btn_log_in">Log in to the hub</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_lessons">Lessons</string>
+    <string name="btn_logout">Logout</string>
 
     <!--text field names-->
     <string name="tf_username">User Name</string>
     <string name="tf_password">Password</string>
+    <string name="tf_email">Email</string>
+    <string name="tf_confirm_password">Confirm Password</string>
+
+    <!--just text-->
+    <string name="txt_forget_password">Forget password</string>
+    <string name="txt_register">Register New Account</string>
 </resources>
