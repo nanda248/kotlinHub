@@ -1,4 +1,4 @@
-package com.example.nanda.kotlinhub
+package com.example.nanda.kotlinhub.table
 
 import android.provider.BaseColumns
 

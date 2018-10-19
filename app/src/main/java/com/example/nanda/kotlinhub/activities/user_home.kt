@@ -1,12 +1,13 @@
-package com.example.nanda.kotlinhub
+package com.example.nanda.kotlinhub.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.nanda.kotlinhub.R
 
-class MainPage : AppCompatActivity() {
+class user_home : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_page)
+        setContentView(R.layout.activity_user_home)
     }
 }
