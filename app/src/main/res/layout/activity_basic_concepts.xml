@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.ActivityBasicConcepts">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="40dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.8"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/kotlin_logo"
+            android:scaleType="fitStart"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textAlignment="textStart"
+            android:gravity="center|start"
+            android:text="Basic Concepts"
+            android:textStyle="bold"
+            android:textSize="12pt"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/button_topic_page">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/overview"/>
+
+        <Button
+            android:id="@+id/btn_topic1"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/btn_topic1"
+            android:textSize="6pt"
+            android:textAlignment="textStart"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/button_topic_page">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/basic_type"/>
+
+        <Button
+            android:id="@+id/btn_topic2"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/btn_topic2"
+            android:textSize="6pt"
+            android:textAlignment="textStart"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/button_topic_page">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/flow_control"/>
+
+        <Button
+            android:id="@+id/btn_topic3"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/btn_topic3"
+            android:textSize="6pt"
+            android:textAlignment="textStart"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/button_topic_page">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/visibility"/>
+
+        <Button
+            android:id="@+id/btn_topic4"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/btn_topic4"
+            android:textSize="6pt"
+            android:textAlignment="textStart"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

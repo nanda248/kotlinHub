@@ -14,7 +14,7 @@ class ActivityTopic1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topic1)
 
-        var jsonHelper = JSONHelper("topic_2", this)
+        var jsonHelper = JSONHelper("topic_1", this)
         var topic1: ArrayList<Section> = jsonHelper.parse()
         var section1 = topic1[0]
 
@@ -28,6 +28,8 @@ class ActivityTopic1 : AppCompatActivity() {
             if(i<topic1.size) {
                 displaySection(topic1[i])
                 i++
+            }else{
+                finish()
             }
         }
     }

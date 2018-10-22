@@ -14,7 +14,7 @@ class user_home : AppCompatActivity() {
 
         val btnTest = findViewById<Button>(R.id.btn_test)
         btnTest.setOnClickListener{
-            val myIntent = Intent(this, ActivityTopic1::class.java)
+            val myIntent = Intent(this, ActivityHomePage::class.java)
             startActivity(myIntent)
         }
     }
