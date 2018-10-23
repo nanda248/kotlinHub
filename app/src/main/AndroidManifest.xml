@@ -27,8 +27,9 @@
         <activity android:name=".activities.ActivityTestReadText" />
         <activity android:name=".ActivityTestReadText" />
         <activity android:name=".activities.ActivityHomePage" />
-        <activity android:name=".activities.ActivityTopic1" />
-        <activity android:name=".activities.ActivityBasicConcepts"></activity>
+        <activity android:name=".activities.ActivityTopic" />
+        <activity android:name=".activities.ActivityBasicConcepts" />
+        <activity android:name=".activities.ActivityTopic2"></activity>
     </application>
 
 </manifest>

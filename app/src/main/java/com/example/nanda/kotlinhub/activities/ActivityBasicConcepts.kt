@@ -18,7 +18,14 @@ class ActivityBasicConcepts : AppCompatActivity() {
         val btnVisibility = findViewById<Button>(R.id.btn_topic4)
 
         btnOverview.setOnClickListener {
-            val myIntent = Intent(this, ActivityTopic1::class.java)
+            val myIntent = Intent(this, ActivityTopic()::class.java)
+            myIntent.putExtra("topicFile", "topic_1")
+            startActivity(myIntent)
+        }
+
+        btnBasicType.setOnClickListener {
+            val myIntent = Intent(this, ActivityTopic()::class.java)
+            myIntent.putExtra("topicFile", "topic_2")
             startActivity(myIntent)
         }
 

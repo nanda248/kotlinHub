@@ -8,13 +8,15 @@ import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section
 
-class ActivityTopic1 : AppCompatActivity() {
+class ActivityTopic() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_topic1)
+        setContentView(R.layout.activity_topic)
 
-        var jsonHelper = JSONHelper("topic_1", this)
+        var topicFile = intent.getStringExtra("topicFile")
+
+        var jsonHelper = JSONHelper(topicFile, this)
         var topic1: ArrayList<Section> = jsonHelper.parse()
         var section1 = topic1[0]
 
