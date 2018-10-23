@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.UserDBHelper
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,8 +33,15 @@ class MainActivity : AppCompatActivity() {
 
         val btnLogIn = findViewById<Button>(R.id.btn_login)
         btnLogIn.setOnClickListener {
-            val myIntent = Intent(this, user_home::class.java)
-            startActivity(myIntent)
+            var email = this.et_login_email.text.toString()
+            var password = this.et_login_password.text.toString()
+            var result = userDBHelper.loginUser(email, password)
+            if(result == true) {
+                val myIntent = Intent(this, user_profile::class.java)
+                startActivity(myIntent)
+            } else {
+                Toast.makeText(this, "Invalid Email or Password.", Toast.LENGTH_LONG).show()
+            }
         }
 
         userDBHelper = UserDBHelper(this)

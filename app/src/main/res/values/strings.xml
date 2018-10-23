@@ -17,4 +17,16 @@
     <!--just text-->
     <string name="txt_forget_password">Forget password</string>
     <string name="txt_register">Register New Account</string>
+    <string name="title_activity_drawer_activity">activity_drawer_activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_user_profile">Kotlin Hub</string>
+
+    <!-- Fragment -->
+    <string name="user_fragment">Hello blank user profile fragment. here here here</string>
+    <string name="lesson_fragment">Hello Lesson fragment. I am here.</string>
 </resources>
