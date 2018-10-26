@@ -89,8 +89,17 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:text="@string/txt_forget_password"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/manageUserAccounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:clickable="true"
-            />
+            android:text="@string/txt_manage_user_accounts" />
 
     </LinearLayout>
 

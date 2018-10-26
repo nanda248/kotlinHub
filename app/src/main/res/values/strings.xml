@@ -8,7 +8,7 @@
     <string name="btn_lessons">Lessons</string>
     <string name="btn_logout">Logout</string>
 
-    <!--text field names-->
+    <!--input text field names-->
     <string name="tf_username">User Name</string>
     <string name="tf_password">Password</string>
     <string name="tf_email">Email</string>
@@ -25,6 +25,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_logout">Logout</string>
     <string name="title_activity_user_profile">Kotlin Hub</string>
+    <string name="txt_manage_user_accounts">Manage User Accounts</string>
 
     <!-- Fragment -->
     <string name="user_fragment">Hello blank user profile fragment. here here here</string>

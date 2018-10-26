@@ -21,13 +21,15 @@ class register : AppCompatActivity() {
 
         val btnRegister = findViewById<Button>(R.id.btn_register)
         btnRegister.setOnClickListener {
-            registerUser()
-//            finish()
+            val result = registerUser()
+            if(result == true) {
+                finish()
+            }
         }
 
         val btnGetAllUsers = findViewById<Button>(R.id.btn_get_users)
         btnGetAllUsers.setOnClickListener {
-            var allUsers = userDBHelper.getAllUsers()
+            val allUsers = userDBHelper.getAllUsers()
             println("GETTING ALL USERS :::: YAY::: ")
             println(allUsers)
             val textView = findViewById<TextView>(R.id.tv_display_users)
@@ -35,18 +37,18 @@ class register : AppCompatActivity() {
             str = "Fetched " + allUsers.size + " users:  \n"
             textView.setText("All Users: " + str)
 
-            var moduleList: String? = null
+            var usersList: String? = null
             allUsers.forEach{
-                moduleList = it.email.toString() + " - " + "\n"
-                textView.append(moduleList)
-                moduleList = ""
+                usersList = it.email.toString() + " - " + "\n"
+                textView.append(usersList)
+                usersList = ""
             }
         }
 
         userDBHelper = UserDBHelper(this)
     }
 
-    fun registerUser() {
+    fun registerUser(): Boolean {
         var username = this.et_username.text.toString()
         var email = this.et_email.text.toString()
         var password = this.et_password.text.toString()
@@ -68,11 +70,14 @@ class register : AppCompatActivity() {
                 this.et_email.setText("")
                 this.et_password.setText("")
                 this.et_confirm_password.setText("")
+                return true
             }else {
                 Toast.makeText(this, "Error! This email already exists. Please choose another one.", Toast.LENGTH_LONG).show()
+                return false
             }
         } else {
             Toast.makeText(this, "Password Mismatch Error !", Toast.LENGTH_LONG).show()
+            return false
         }
     }
 }
