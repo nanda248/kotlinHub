@@ -1,0 +1,20 @@
+[
+  {
+    "id":4,
+    "topic":"Kotlin Type Conversion",
+    "section":1,
+    "title":"Type Conversion",
+    "content":[
+      "In Kotlin, a numeric value of one type is not automatically converted to another type even when the other type is larger. This is different from how Java handles numeric conversions. ",
+      "For example, if you want to convert a value of type Int to type Long, you need to use toLong() explicitly:"
+    ],
+    "code": [
+      "val number1: Int = 55",
+      "val number2: Long = number1   // Error: type mismatch.",
+      " ",
+      "val number1: Int = 55",
+      "val number2: Long = number1.toLong()"
+    ],
+    "highlight": "N"
+  }
+]
