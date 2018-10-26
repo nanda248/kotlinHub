@@ -10,14 +10,16 @@
     <string name="btn_next">Continue</string>
     <string name="btn_topic1">Kotlin Overview</string>
     <string name="btn_topic2">Basic Data Types</string>
-    <string name="btn_topic3">Control Flow</string>
-    <string name="btn_topic4">Visibility Control</string>
     <string name="btn_close">Close</string>
     <string name="btn_yes">Yes</string>
     <string name="btn_later">Later</string>
     <string name="btn_yay">Yay!</string>
     <string name="btn_quiz">Quiz</string>
     <string name="btn_resource">Resource</string>
+    <string name="btn_topic3">Operators</string>
+    <string name="btn_topic4">Type Conversion</string>
+    <string name="btn_topic5">Expressions &amp; Statements</string>
+    <string name="btn_topic6">Kotlin Comments</string>
 
     <!--input text field names-->
     <string name="tf_username">User Name</string>
@@ -37,6 +39,11 @@
     <string name="action_logout">Logout</string>
     <string name="title_activity_user_profile">Kotlin Hub</string>
     <string name="txt_manage_user_accounts">Manage User Accounts</string>
+    <string name="tv_basic">Basic Concepts</string>
+    <string name="tv_class">Flow Control</string>
+    <string name="tv_function">Functions</string>
+    <string name="tv_miscell">OOP</string>
+    <string name="tv_congrats">Congratulations!</string>
 
     <!-- Fragment -->
     <string name="user_fragment">Hello blank user profile fragment. here here here</string>

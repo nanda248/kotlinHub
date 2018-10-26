@@ -1,0 +1,23 @@
+[
+  {
+    "id":12,
+    "topic":"Kotlin continue Expression",
+    "section":1,
+    "title":"Unlabeled continue",
+    "content":[
+      "Suppose you are working with loops. It is sometimes desirable to skip the current iteration of the loop.",
+      "In such case, continue is used. The continue construct skips the current iteration of the enclosing loop, and the control of the program jumps to the end of the loop body.",
+      "In the following example, if the testExpression2 is evaluated to true, continue is executed which skips all the codes2 for that iteration."
+    ],
+    "code": [
+      "while (testExpression1) {",
+      "    // codes1",
+      "    if (testExpression2) ",
+      "        continue",
+      "    }",
+      "    // codes2",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

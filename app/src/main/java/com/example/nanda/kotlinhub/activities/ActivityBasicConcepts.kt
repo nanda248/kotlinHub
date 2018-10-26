@@ -14,8 +14,8 @@ class ActivityBasicConcepts : AppCompatActivity() {
 
         val btnOverview = findViewById<Button>(R.id.btn_topic1)
         val btnBasicType = findViewById<Button>(R.id.btn_topic2)
-        val btnControlFlow = findViewById<Button>(R.id.btn_topic3)
-        val btnVisibility = findViewById<Button>(R.id.btn_topic4)
+        val btnOperator = findViewById<Button>(R.id.btn_topic3)
+        val btnTypeConvertion = findViewById<Button>(R.id.btn_topic4)
 
         btnOverview.setOnClickListener {
             val myIntent = Intent(this, ActivityTopic()::class.java)
