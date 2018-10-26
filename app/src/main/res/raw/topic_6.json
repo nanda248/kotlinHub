@@ -1,0 +1,36 @@
+[
+  {
+    "id":6,
+    "topic":"Kotlin Comments",
+    "section":1,
+    "title":"Traditional Comment /* ... */",
+    "content":[
+      "This is a multiline comment that can span over multiple lines. The Kotlin compiler ignores everything inside the block."
+      ],
+    "code": [
+      "/* This is a multi-line comment.",
+      " * The problem prints \"Hello!\" to the standard output.",
+      " */",
+      "fun main(args: Array<String>) {",
+      "   println(\"Hello!\")",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":6,
+    "topic":"Kotlin Comments",
+    "section":2,
+    "title":"End of Line Comment //",
+    "content":[
+      "The compiler ignores everything from // to the end of the line."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "   println(\"Hello!\") // outputs Hello! on the screen",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

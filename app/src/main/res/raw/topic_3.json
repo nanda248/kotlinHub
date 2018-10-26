@@ -1,0 +1,118 @@
+[
+  {
+    "id":3,
+    "topic":"Operators",
+    "section":1,
+    "title":"Arithmetic Operators",
+    "content":[
+      "Operators are special symbols (characters) that carry out operations on operands (variables and values). For example, + is an operator that performs addition.",
+      "Here's a list of arithmetic operators in Kotlin:"
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    val number1 = 12.5",
+      "    val number2 = 3.5",
+      "    var result: Double",
+      " ",
+      "    result = number1 + number2",
+      "    result = number1 - number2",
+      "    result = number1 * number2",
+      "    result = number1 / number2",
+      "    result = number1 % number2",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":3,
+    "topic":"Operators",
+    "section":2,
+    "title":"Assignment Operators",
+    "content":[
+      "Assignment operators are used to assign value to a variable."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "   var number = 12",
+      "   ",
+      "   number += 5   //number = number + 5",
+      "   number -= 5   //number = number - 5",
+      "   number *= 5   //number = number * 5",
+      "   number /= 5   //number = number / 5",
+      "   number %= 5   //number = number % 5",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":3,
+    "topic":"Operators",
+    "section":3,
+    "title":"Comparison and Equality Operators",
+    "content":[
+      "Kotlin represents character using char. Character should be declared in a single quote like ‘c’. Please enter the following code in our coding ground and see how Kotlin interprets the character variable. Character variable cannot be declared like number variables. Kotlin variable can be declared in two ways - one using “var” and another using “val”."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "   val a = 5",
+      "   val b = 10",
+      "   var result: Boolean",
+      "   result = (a > b)   //greater than",
+      "   result = (a < b)   //less than",
+      "   result = (a >= b)   //greater than or equal to",
+      "   result = (a <= b)   //less than or equal to",
+      "   result = (a == b)   //equal to",
+      "   result = (a != b)   //not equal to",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":3,
+    "topic":"Operators",
+    "section":4,
+    "title":"Logical Operators",
+    "content":[
+      "There are two logical operators in Kotlin: || and &&.",
+      "Logical operators are used in control flow such as if expression, when expression, and loops."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    val a = 10",
+      "    val b = 9",
+      "    val c = -1",
+      "    val result: Boolean",
+      "    result = (a>b) && (a>c) // result = (a>b) and (a>c)",
+      "    result = (a>b) || (b>c) // result = (a>b) or (a>c)",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":2,
+    "topic":"Operators",
+    "section":5,
+    "title":"in Operator",
+    "content":[
+      "The in operator is used to check whether an object belongs to a collection."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    val numbers = intArrayOf(1, 4, 42, -3)",
+      " ",
+      "    if (4 in numbers) {",
+      "        println(\"numbers array contains 4.\")",
+      "    }",
+      "    if (10 !in numbers) {",
+      "        println(\"numbers array does not contain 10.\")",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  }
+
+]
