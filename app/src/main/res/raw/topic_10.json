@@ -1,0 +1,57 @@
+[
+  {
+    "id":10,
+    "topic":"Kotlin for Loop",
+    "section":1,
+    "title":"Iterate Through a Range",
+    "content":[
+      "The for loop in Kotlin iterates through anything that provides an iterator.",
+      "Here, the loop iterates through the range and prints individual item."
+     ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    for (i in 1..5) {",
+      "        println(i)",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":10,
+    "topic":"Kotlin for Loop",
+    "section":2,
+    "title":"Iterating Through an Array",
+    "content":[
+      "Here's an example to iterate through a String array."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    var language = arrayOf(\"Koltin\", \"Python\", \"Java\")",
+      "    for (item in language)",
+      "        println(item)",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":10,
+    "topic":"Kotlin for Loop",
+    "section":3,
+    "title":"Iterating Through a String",
+    "content":[
+      "Here's an example to iterate through a String."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    var text= \"Kotlin\"",
+      "    for (letter in text) {",
+      "        println(letter)",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]
