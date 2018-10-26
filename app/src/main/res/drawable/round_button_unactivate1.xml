@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <item>
+        <shape android:shape="oval">
+            <stroke android:color="@color/grey" android:width="5dp" />
+            <solid android:color="@color/grey"/>
+            <size android:width="150dp" android:height="150dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/unactivate_stage1"
+        android:width="40dp"
+        android:height="40dp"
+        android:gravity="center"/>
+
+</layer-list>
