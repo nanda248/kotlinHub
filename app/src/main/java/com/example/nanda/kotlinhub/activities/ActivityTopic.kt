@@ -8,7 +8,7 @@ import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section
 
-class ActivityTopic() : AppCompatActivity() {
+class ActivityTopic : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +17,8 @@ class ActivityTopic() : AppCompatActivity() {
         var topicFile = intent.getStringExtra("topicFile")
 
         var jsonHelper = JSONHelper(topicFile, this)
-        var topic1: ArrayList<Section> = jsonHelper.parse()
-        var section1 = topic1[0]
+        var topic: ArrayList<Section> = jsonHelper.parse()
+        var section1 = topic[0]
 
         displaySection(section1)
 
@@ -27,8 +27,8 @@ class ActivityTopic() : AppCompatActivity() {
 
 
         btnNext.setOnClickListener {
-            if(i<topic1.size) {
-                displaySection(topic1[i])
+            if(i<topic.size) {
+                displaySection(topic[i])
                 i++
             }else{
                 finish()
