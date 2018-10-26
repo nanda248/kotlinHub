@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ActivityHomePage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:indeterminate="false"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:background="@drawable/circle_shape_for_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="65" />
+
+        <ImageButton
+            android:id="@+id/btn_basic_concept"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_button_activate1" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:textAlignment="center"
+        android:gravity="top"
+        android:text="@string/tv_basic"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_class_object"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/round_button_unactivate1"/>
+
+        <ImageButton
+            android:id="@+id/btn_function"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/round_button_unactivate1"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="@string/tv_class">
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="@string/tv_function"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_miscellaneous"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_button_unactivate1"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:textAlignment="center"
+        android:text="@string/tv_miscell"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_success"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_button_unactivate2"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:textAlignment="center"
+        android:text="@string/tv_congrats"/>
+
+</LinearLayout>

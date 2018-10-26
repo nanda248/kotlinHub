@@ -13,9 +13,22 @@
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activities.register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.user_home"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.ActivityTestReadText" />
+        <activity android:name=".activities.ActivityHomePage" />
+        <activity android:name=".activities.ActivityTopic" />
+        <activity android:name=".activities.ActivityBasicConcepts" />
+        <activity
+            android:name=".activities.ActivityLaunchScreen"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

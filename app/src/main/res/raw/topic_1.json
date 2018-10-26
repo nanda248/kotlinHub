@@ -1,0 +1,43 @@
+[
+  {
+    "id":1,
+    "topic":"Kotlin Overview",
+    "section":1,
+    "title":"Introduction",
+    "content":[
+      "Kotlin is a new open source programming language like Java, JavaScript, etc. It is a high level strongly statically typed language that combines functional and technical part in a same place. Currently, Kotlin targets Java and JavaScript. It runs on JVM.",
+      "Kotlin is influenced by other programming languages such as Java, Scala, Groovy, Gosu, etc. The syntax of Kotlin may not be exactly similar to JAVA, however, internally Kotlin is reliant on the existing Java Class library to produce wonderful results for the programmers. Kotlin provides interoperability, code safety, and clarity to the developers around the world."
+    ],
+    "code": ["N"],
+    "highlight": "N"
+  },
+
+  {
+    "id":1,
+    "topic":"Kotlin Overview",
+    "section":2,
+    "title":"Advantages",
+    "content":[
+      "Following are some of the advantages of using Kotlin for your application development.",
+      "Easy Language − Kotlin is a functional language and very easy to learn. The syntax is pretty much similar to Java, hence it is very easy to remember. Kotlin is more expressive, which makes your code more readable and understandable.",
+      "Concise − Kotlin is based on JVM and it is a functional language. Thus, it reduce lots of boiler plate code used in other programming languages.",
+      "Runtime and Performance − Better performance and small runtime."
+    ],
+    "code": ["N"],
+    "highlight": "N"
+  },
+
+  {
+    "id":1,
+    "topic":"Kotlin Overview",
+    "section":3,
+    "title":"Disadvantages",
+    "content":[
+      "Following are some of the disadvantages of Kotlin.",
+      "Namespace declaration − Kotlin allows developers to declare the functions at the top level. However, whenever the same function is declared in many places of your application, then it is hard to understand which function is being called.",
+      "No Static Declaration − Kotlin does not have usual static handling modifier like Java, which can cause some problem to the conventional Java developer."
+    ],
+    "code": ["N"],
+    "highlight": "N"
+  }
+]
