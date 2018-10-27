@@ -1,0 +1,66 @@
+[
+  {
+    "id":16,
+    "topic":"Class and Objects",
+    "section":1,
+    "title":"Kotlin Class",
+    "content":[
+      "Kotlin supports both functional and object-oriented programming.",
+      "Before you create objects in Kotlin, you need to define a class. We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object.",
+      "To define a class in Kotlin, class keyword is used:"
+    ],
+    "code": [
+      "class Lamp {",
+      "    ",
+      "    // property (data member)",
+      "    private var isOn: Boolean = false",
+      "    ",
+      "    // member function",
+      "    fun turnOn() {",
+      "        isOn = true",
+      "    }",
+      "    ",
+      "    // member function",
+      "    fun turnOff() {",
+      "        isOn = false",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":16,
+    "topic":"Class and Objects",
+    "section":2,
+    "title":"Kotlin Objects",
+    "content":[
+      "When class is defined, only the specification for the object is defined; no memory or storage is allocated.",
+      "To access members defined within the class, you need to create objects. Let's create objects of Lamp class."
+    ],
+    "code": [
+      "class Lamp {",
+      "    ",
+      "    // property (data member)",
+      "    private var isOn: Boolean = false",
+      "    ",
+      "    // member function",
+      "    fun displayLightStatus(lamp: String) {",
+      "        if (isOn == true)",
+      "            println(\"$lamp lamp is on.\")",
+      "        else",
+      "            println(\"$lamp lamp is off.\")",
+      "    }",
+      "}",
+      "    ",
+      "fun main(args: Array<String>) {",
+      "    val l1 = Lamp() // create l1 object of Lamp class",
+      "    val l2 = Lamp() // create l2 object of Lamp class",
+      "    ",
+      "    l1.displayLightStatus(\"l1\")",
+      "    l2.displayLightStatus(\"l2\")",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

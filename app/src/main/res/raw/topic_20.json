@@ -1,0 +1,56 @@
+[
+  {
+    "id":20,
+    "topic":"Kotlin Interfaces",
+    "section":1,
+    "title":"Define an Interface",
+    "content":[
+      "Kotlin interfaces are similar to interfaces in Java 8. They can contain definitions of abstract methods as well as implementations of non-abstract methods. However, they cannot contain any state.",
+      "Meaning, interface may have property but it needs to be abstract or has to provide accessor implementations.",
+      "Keyword \"interface\" is used to define interfaces in Kotlin. For example,"
+    ],
+    "code": [
+      "interface MyInterface {",
+      "    ",
+      "    // abstract property",
+      "    var test: String",
+      "    ",
+      "    // abstract method",
+      "    fun foo()",
+      "    ",
+      "    // method with default implementation",
+      "    fun hello() = \"Hello there\"",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":20,
+    "topic":"Kotlin Interfaces",
+    "section":2,
+    "title":"Implement an Interface",
+    "content":[
+      "Here's how a class or object can implement the interface:"
+    ],
+    "code": [
+      "interface MyInterface {",
+      "    ",
+      "    // abstract property",
+      "    var test: Int",
+      "    ",
+      "    // abstract method",
+      "    fun foo(): String",
+      "}",
+      "    ",
+      "class InterfaceImp : MyInterface {",
+      "    ",
+      "    override val test: Int = 25",
+      "    override fun foo() = \"Lol\"",
+      "    ",
+      "    // other code",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]
