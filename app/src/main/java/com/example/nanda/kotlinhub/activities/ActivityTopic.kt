@@ -4,6 +4,9 @@ import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
 import android.transition.Slide
 import android.transition.TransitionManager
 import android.view.Gravity
@@ -28,6 +31,10 @@ class ActivityTopic : AppCompatActivity() {
         var topic: ArrayList<Section> = jsonHelper.parse()
         var section1 = topic[0]
 
+        var sectionProgress = findViewById<ProgressBar>(R.id.pb_section)
+        sectionProgress.max = topic.size
+        sectionProgress.progress = 1
+
         displaySection(section1)
 
         userDBHelper = UserDBHelper(this)
@@ -40,6 +47,7 @@ class ActivityTopic : AppCompatActivity() {
 
         btnNext.setOnClickListener {
             if(i<topic.size) {
+                sectionProgress.progress = (i+1)
                 displaySection(topic[i])
                 userDBHelper.updateProgress(i, username)
                 i++
