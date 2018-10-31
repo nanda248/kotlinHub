@@ -17,5 +17,19 @@
     "C": "var result3 = ((10==5) || (10>=20))",
     "D": "var result4 = ((10!=5) && (10>=20))",
     "Ans": "B"
+  },
+
+  {
+    "Qn": "What is the output of the following code ?",
+    "Code": [
+      "print(2.5 in 1..3)",
+      "print(\" \")",
+      "print(3.5 in 1..3)"
+    ],
+    "A": "true false",
+    "B": "false true",
+    "C": "false false",
+    "D": "true true",
+    "Ans": "D"
   }
 ]

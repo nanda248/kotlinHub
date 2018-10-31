@@ -1,0 +1,30 @@
+[
+  {
+    "Qn": "What is the output of the following code?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    val a = 6",
+      "    val b = 8",
+      "    val result: Int",
+      "  ",
+      "    result = if (a > b) a else b",
+      "    println(result)",
+      "}"
+    ],
+    "A": "6",
+    "B": "8",
+    "C": "14",
+    "D": "false",
+    "Ans": "B"
+  },
+
+  {
+    "Qn": "Which of the following is an expression?",
+    "Code": ["N"],
+    "A": "if (a > b) a else b",
+    "B": "val score = 90 + 25",
+    "C": "var result = true",
+    "D": "var number",
+    "Ans": "A"
+  }
+]

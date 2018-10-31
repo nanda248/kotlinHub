@@ -1,0 +1,47 @@
+[
+  {
+    "Qn": "What is the value of result in the following code?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    val number = 0",
+      "    val result = if (number > 0) {",
+      "        \"Positive number\"",
+      "     } else {",
+      "        \"Negative number\"",
+      "     }",
+      "}"
+    ],
+    "A": "Positive number",
+    "B": "Negative number",
+    "C": "Variable result will not be defined/initialized",
+    "D": "This piece of code will cause an error",
+    "Ans": "B"
+  },
+
+  {
+    "Qn": "What is the output of the following code?",
+    "Code": [
+      "val n1 = 3",
+      "val n2 = 5",
+      "val n3 = -2",
+      "   ",
+      "val result = if (n1 > n2) {",
+      "    if (n1 > n3)",
+      "        n1",
+      "    else",
+      "        n3",
+      "} else {",
+      "    if (n2 > n3)",
+      "        n2",
+      "    else",
+      "        n3",
+      "}",
+      "println(\"result = $result\")"
+    ],
+    "A": "result = 5",
+    "B": "result = 0",
+    "C": "result = 3",
+    "D": "result = -2",
+    "Ans": "A"
+  }
+]
