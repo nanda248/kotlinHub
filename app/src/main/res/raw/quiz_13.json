@@ -1,0 +1,40 @@
+[
+  {
+    "Qn": "What kind of function is used by the following code? Please choose the most appropriate answer.",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "   val myFun :(String)->Unit",
+      "          = {s:String->print(s)}",
+      "   val v:String = \"Kotlin\"",
+      "   myFun(v)",
+      "}"
+    ],
+    "A": "Lambda Function",
+    "B": "Inline Function",
+    "C": "Just a normal function",
+    "D": "It is not a function",
+    "Ans": "A"
+  },
+
+  {
+    "Qn": "What does this code do?",
+    "Code": [
+      "fun foo(): () -> Int {",
+      "    return {",
+      "        val a = 1",
+      "        a * 42",
+      "    }",
+      "}",
+      "    ",
+      "fun main() {",
+      "    foo()()",
+      "}"
+    ],
+    "A": "Function foo() is returning an integer",
+    "B": "Invoke function foo()",
+    "C": "This code will cause an error",
+    "D": "Invoke the function that is returned by function foo()",
+    "Ans": "D"
+  }
+]
