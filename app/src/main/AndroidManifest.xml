@@ -38,6 +38,7 @@
             android:label="@string/title_activity_user_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.manage_user" />
+        <activity android:name=".ActivityProfilePage"></activity>
         <activity android:name=".activities.ActivityQuiz"></activity>
         <activity android:name=".activities.ActivityProfilePage"></activity>
     </application>
