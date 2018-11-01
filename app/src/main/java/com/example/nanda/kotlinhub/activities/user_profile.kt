@@ -1,5 +1,6 @@
 package com.example.nanda.kotlinhub.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
@@ -7,9 +8,10 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageButton
 import com.example.nanda.kotlinhub.R
-import com.example.nanda.kotlinhub.fragments.lesson_view
-import com.example.nanda.kotlinhub.fragments.profile_view
+import com.example.nanda.kotlinhub.fragments.home_view
+import com.example.nanda.kotlinhub.fragments.user_profile_view
 import kotlinx.android.synthetic.main.activity_user_profile.*
 import kotlinx.android.synthetic.main.app_bar_user_profile.*
 
@@ -25,12 +27,25 @@ class user_profile : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        val userProfileFragment = profile_view()
-        transaction.add(R.id.user_frame_layout, userProfileFragment)
-        transaction.commit()
+//        val fragmentManager = supportFragmentManager
+//        val transaction = fragmentManager.beginTransaction()
+//        val userProfileFragment = profile_view()
+//        transaction.add(R.id.user_frame_layout, userProfileFragment)
+//        transaction.commit()
+
+        val btnBasicConcept = findViewById<ImageButton>(R.id.btn_basic_concept)
+        val btnCO = findViewById<ImageButton>(R.id.btn_class_object)
+        val btnFun = findViewById<ImageButton>(R.id.btn_function)
+        val btnMiscell = findViewById<ImageButton>(R.id.btn_miscellaneous)
+
+        btnBasicConcept.setOnClickListener {
+            val myIntent = Intent(this, ActivityBasicConcepts::class.java)
+            startActivity(myIntent)
+        }
+
         nav_view.setNavigationItemSelectedListener(this)
+
+
 
     }
 
@@ -61,14 +76,19 @@ class user_profile : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
+
+//        val homeIntent = Intent(this,ActivityHomePage::class.java)
+//        val profileIntent = Intent(this, ActivityProfilePage::class.java)
         when (item.itemId) {
             R.id.nav_home -> {
-                val userProfileFragment = profile_view()
-                transaction.add(R.id.user_frame_layout, userProfileFragment)
+//                startActivity(homeIntent)
+                val homeFragment = home_view()
+                transaction.add(R.id.user_frame_layout, homeFragment)
             }
             R.id.nav_lesson -> {
-                val lessonFragment = lesson_view()
-                transaction.add(R.id.user_frame_layout, lessonFragment)
+//                startActivity(profileIntent)
+                val userProfileFragment = user_profile_view()
+                transaction.add(R.id.user_frame_layout, userProfileFragment)
             }
         }
         transaction.commit()

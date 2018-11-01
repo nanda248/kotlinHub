@@ -10,30 +10,31 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="50dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
         <ProgressBar
             android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:indeterminate="false"
             android:layout_centerInParent="true"
-            android:progressDrawable="@drawable/circular_progress_bar"
             android:background="@drawable/circle_shape_for_progress_bar"
-            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="false"
             android:max="100"
-            android:progress="65" />
+            android:progress="65"
+            android:progressDrawable="@drawable/circular_progress_bar" />
 
         <ImageButton
             android:id="@+id/btn_basic_concept"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_gravity="center"
             android:layout_centerInParent="true"
-            android:scaleType="fitCenter"
+            android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:background="@drawable/round_button_activate1" />
+            android:background="@drawable/round_button_activate1"
+            android:scaleType="fitCenter" />
 
     </RelativeLayout>
 

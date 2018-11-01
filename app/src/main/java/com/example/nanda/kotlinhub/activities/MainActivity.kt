@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             var password = this.et_login_password.text.toString()
             var result = userDBHelper.loginUser(email, password)
             if(result == true) {
-                val myIntent = Intent(this, user_profile::class.java)
+                val myIntent = Intent(this, ActivityHomePage::class.java)
                 startActivity(myIntent)
             } else {
                 Toast.makeText(this, "Invalid Email or Password.", Toast.LENGTH_LONG).show()

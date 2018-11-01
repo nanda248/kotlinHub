@@ -40,4 +40,7 @@
     <string name="tv_function">Function</string>
     <string name="tv_miscell">Miscellaneous Topics</string>
     <string name="tv_congrats">Congratulations!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

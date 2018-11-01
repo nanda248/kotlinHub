@@ -9,7 +9,7 @@
     tools:context=".activities.user_profile"
     tools:showIn="@layout/app_bar_user_profile">
 
-
+    <!--<include layout="@layout/activity_home_page" />-->
         <FrameLayout
             android:id="@+id/user_frame_layout"
             android:layout_width="match_parent"

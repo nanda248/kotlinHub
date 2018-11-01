@@ -54,14 +54,6 @@ class register : AppCompatActivity() {
         var password = this.et_password.text.toString()
         var confirmPassword = this.et_confirm_password.text.toString()
 
-        println("THIS IS IN REGISTER USER")
-
-        if(::userDBHelper.isInitialized) {
-            println("INITIALIZED")
-        }else {
-            println("NOT INITIALIZED")
-        }
-
         if(password == confirmPassword) {
             val result = userDBHelper.registerUser(UserDataRecord(username,0,email, password, true))
             if(result == true) {
