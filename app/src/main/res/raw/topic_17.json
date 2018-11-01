@@ -39,7 +39,6 @@
       "class Log {",
       "    constructor(data: String) {",
       "        // some code",
-      "    private var isOn: Boolean = false",
       "    }",
       "    ",
       "    constructor(data: String, numberOfData: Int) {",

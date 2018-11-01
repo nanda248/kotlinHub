@@ -1,0 +1,53 @@
+[
+  {
+    "Qn": "What will be the output of the following code?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    val n = 8",
+      "    val first = 0",
+      "    val second = 1",
+      "    ",
+      "    println(fibonacci(n, first, second))",
+      "}",
+      "    ",
+      "fun fibonacci(n: Int, a: Int, b: Int): Int {",
+      "    ",
+      "    if (n == 0)",
+      "       return a",
+      "    else",
+      "       return fibonacci(n-1, b, a+b)",
+      "}"
+    ],
+    "A": "8",
+    "B": "13",
+    "C": "21",
+    "D": "0",
+    "Ans": "B"
+  },
+
+  {
+    "Qn": "How many times is fibonacci(n: Int, a: Int, b: Int) executed in the following code?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    val n = 8",
+      "    val first = 0",
+      "    val second = 1",
+      "    ",
+      "    println(fibonacci(n, first, second))",
+      "}",
+      "    ",
+      "fun fibonacci(n: Int, a: Int, b: Int): Int {",
+      "    ",
+      "    if (n == 0)",
+      "       return a",
+      "    else",
+      "       return fibonacci(n-1, b, a+b)",
+      "}"
+    ],
+    "A": "7",
+    "B": "8",
+    "C": "9",
+    "D": "0",
+    "Ans": "C"
+  }
+]
