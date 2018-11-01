@@ -1,0 +1,37 @@
+[
+  {
+    "Qn": "Which of the following is not the shared characteristics of objects in OOP?",
+    "Code": [
+      "N"
+    ],
+    "A": "State",
+    "B": "Identity",
+    "C": "Behavior",
+    "D": "Integrity",
+    "Ans": "D"
+  },
+
+  {
+    "Qn": "What will happen if we run the following code?",
+    "Code": [
+      "class Lamp {",
+      "    ",
+      "    private var isOn: Boolean = false",
+      "    ",
+      "    fun turnOn() {",
+      "        isOn = true",
+      "    }",
+      "}",
+      "    ",
+      "fun main(args: Array<String>) {",
+      "    val l = Lamp()",
+      "    l.isOn = true",
+      "}"
+    ],
+    "A": "Object l's property isOn is set to be true",
+    "B": "An exception will be thrown",
+    "C": "Object l's property isOn will not be changed",
+    "D": "Lamp object cannot be created",
+    "Ans": "B"
+  }
+]

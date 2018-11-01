@@ -1,0 +1,25 @@
+[
+  {
+  "Qn": "What is the difference between an abstract class and a base class in inheritance?",
+  "Code": [
+    "N"
+  ],
+  "A": "They are the same, just different names.",
+  "B": "Both can be inherited to derive child class.",
+  "C": "Both can be instantiated to create objects of the class.",
+  "D": "Base classes can store states but abstract classes cannot. ",
+  "Ans": "B"
+  },
+
+  {
+    "Qn": "Which of the following statements about abstract class is true?",
+    "Code": [
+      "N"
+    ],
+    "A": "The members (properties and methods) of an abstract class must be abstract too.",
+    "B": "Abstract methods in an abstract class may not be overridden in its subclasses.",
+    "C": "Abstract classes are always open.",
+    "D": "Keyword \"open\" is not allowed to use inside an abstract class.",
+    "Ans": "C"
+  }
+]

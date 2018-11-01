@@ -1,0 +1,25 @@
+[
+  {
+    "Qn": "Is there any constraints on the number of secondary constructors created? Choose the most appropriate answer.",
+    "Code": [
+      "N"
+    ],
+    "A": "Yes, only 3 secondary constructors can be created",
+    "B": "Yes, only 1 secondary constructor can be created",
+    "C": "No, no constraints at all",
+    "D": "No, however, all of the secondary constructors should call the primary constructor directly or indirectly.",
+    "Ans": "D"
+  },
+
+  {
+    "Qn": "Can primary constructor contain any code? Choose the most appropriate answer",
+    "Code": [
+      "N"
+    ],
+    "A": "No, primary constructor has a constrained syntax and cannot contain any initializer",
+    "B": "Yes, it can contain any code you want",
+    "C": "No, but you can put the initialization code inside an initializer block",
+    "D": "No, you can only include code in secondary constructor",
+    "Ans": "C"
+  }
+]
