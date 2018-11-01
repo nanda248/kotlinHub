@@ -24,19 +24,34 @@ class ActivityQuiz : AppCompatActivity() {
 
         displayQnAns(qnAns1)
 
-        val ans = qnAns1.getAns()
+        var ans = qnAns1.getAns()
+
+        var index = 1
+        var max = quiz.size + 1
 
         val correctBuilder = AlertDialog.Builder(this@ActivityQuiz)
         correctBuilder.setTitle("You are correct!")
         correctBuilder.setPositiveButton("NEXT"){dialog, which ->
-
+            if(index<max){
+                displayQnAns(quiz[index])
+                ans = quiz[index].getAns() //assign new value to ans variable
+                index++
+            }else{
+                finish()
+            }
         }
         val correctDialog: AlertDialog = correctBuilder.create()
 
         val wrongBuilder = AlertDialog.Builder(this@ActivityQuiz)
         wrongBuilder.setTitle("Correct solution: " + ans)
         wrongBuilder.setPositiveButton("NEXT"){dialog, which ->
-
+            if(index<max){
+                displayQnAns(quiz[index])
+                ans = quiz[index].getAns()
+                index++
+            }else{
+                finish()
+            }
         }
         val wrongDialog: AlertDialog = wrongBuilder.create()
 
