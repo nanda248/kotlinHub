@@ -1,0 +1,25 @@
+[
+  {
+    "Qn": "What does a data class not offer",
+    "Code": [
+      "N"
+    ],
+    "A": "An auto-generated toString() method.",
+    "B": "Auto-generated hashCode() and equals() methods.",
+    "C": "Automatic conversion to/from JSON",
+    "D": "A generated copy(...) method, to create copies of instances.",
+    "Ans": "C"
+  },
+
+  {
+    "Qn": "Which of the following keywords can be put in front of a data class?",
+    "Code": [
+      "N"
+    ],
+    "A": "open",
+    "B": "abstract",
+    "C": "sealed",
+    "D": "None of the above",
+    "Ans": "D"
+  }
+]
