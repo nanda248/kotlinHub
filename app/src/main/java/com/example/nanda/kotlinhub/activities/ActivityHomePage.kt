@@ -29,6 +29,7 @@ class ActivityHomePage : AppCompatActivity() {
         val btnFC = findViewById<ImageButton>(R.id.btn_class_object)
         val btnFunction = findViewById<ImageButton>(R.id.btn_function)
         val btnOOP = findViewById<ImageButton>(R.id.btn_miscellaneous)
+        val test = findViewById<Button>(R.id.test)
 
         btnBasicConcept.setOnClickListener {
             val myIntent = Intent(this, ActivityBasicConcepts::class.java)
@@ -40,6 +41,12 @@ class ActivityHomePage : AppCompatActivity() {
         testUsername.setText(username)
         btnCO.setOnClickListener {
             showPopupModal()
+        }
+
+        test.setOnClickListener {
+            val myIntent = Intent(this, ActivityQuiz::class.java)
+            myIntent.putExtra("quizFile", "quiz_3")
+            startActivity(myIntent)
         }
 
     }

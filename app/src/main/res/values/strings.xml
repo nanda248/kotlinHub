@@ -8,6 +8,7 @@
     <string name="btn_lessons">Lessons</string>
     <string name="btn_logout">Logout</string>
     <string name="btn_next">Continue</string>
+    <string name="btn_close">Close</string>
     <string name="btn_topic1">Kotlin Overview</string>
     <string name="btn_topic2">Basic Data Types</string>
     <string name="btn_close">Close</string>

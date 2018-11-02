@@ -17,6 +17,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
         val btnOperators = findViewById<Button>(R.id.btn_topic3)
         val btnTypeConvertion = findViewById<Button>(R.id.btn_topic4)
         val btnES = findViewById<Button>(R.id.btn_topic5)
+        val btnComment = findViewById<Button>(R.id.btn_topic6)
 
         btnOverview.setOnClickListener {
             val myIntent = Intent(this, ActivityTopic()::class.java)
@@ -27,6 +28,30 @@ class ActivityBasicConcepts : AppCompatActivity() {
         btnBasicType.setOnClickListener {
             val myIntent = Intent(this, ActivityTopic()::class.java)
             myIntent.putExtra("topicFile", "topic_2")
+            startActivity(myIntent)
+        }
+
+        btnOperators.setOnClickListener {
+            val myIntent = Intent(this, ActivityTopic()::class.java)
+            myIntent.putExtra("topicFile", "topic_3")
+            startActivity(myIntent)
+        }
+
+        btnTypeConvertion.setOnClickListener {
+            val myIntent = Intent(this, ActivityTopic()::class.java)
+            myIntent.putExtra("topicFile", "topic_4")
+            startActivity(myIntent)
+        }
+
+        btnES.setOnClickListener {
+            val myIntent = Intent(this, ActivityTopic()::class.java)
+            myIntent.putExtra("topicFile", "topic_5")
+            startActivity(myIntent)
+        }
+
+        btnComment.setOnClickListener {
+            val myIntent = Intent(this, ActivityTopic()::class.java)
+            myIntent.putExtra("topicFile", "topic_6")
             startActivity(myIntent)
         }
 
