@@ -2,7 +2,6 @@ package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -78,11 +77,6 @@ class ActivityHomePage : AppCompatActivity() {
         tv.setText("Congratulation! You have completed n Level.")
         val btnPopup = view.findViewById<Button>(R.id.btn_yay)
 
-        // Set click listener for popup window's text view
-        tv.setOnClickListener{
-            // Change the text color of popup window's text view
-            tv.setTextColor(Color.CYAN)
-        }
 
         // Set a click listener for popup's button widget
         btnPopup.setOnClickListener{
