@@ -39,7 +39,7 @@ class register : AppCompatActivity() {
 
             var usersList: String? = null
             allUsers.forEach{
-                usersList = it.email.toString() + " - " + "\n"
+                usersList = it.email.toString() + " - " + it.username.toString() +" - " + it.progress.toString() + "\n"
                 textView.append(usersList)
                 usersList = ""
             }
@@ -55,7 +55,7 @@ class register : AppCompatActivity() {
         var confirmPassword = this.et_confirm_password.text.toString()
 
         if(password == confirmPassword) {
-            val result = userDBHelper.registerUser(UserDataRecord(username,0,email, password, true))
+            val result = userDBHelper.registerUser(UserDataRecord(username,0,email, password, false, 0))
             if(result == true) {
                 Toast.makeText(this, "Registered Successfully!", Toast.LENGTH_LONG).show()
                 this.et_username.setText("")

@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import com.example.nanda.kotlinhub.model.UserDataRecord
 import com.example.nanda.kotlinhub.table.UserTableInfo
 
-class SimpleUserRecord(val username: String, val points: Int, val email: String, val isLoggedIn: String)
+class SimpleUserRecord(val username: String, val points: Int, val email: String, val isLoggedIn: String, val progress: Int)
 
 class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -19,10 +19,11 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
 
         private val SQL_CREATE_ENTRIES =
                 "CREATE TABLE " + UserTableInfo.TABLE_NAME + " (" +
-                        UserTableInfo.COLUMN_USERNAME + " TEXT PRIMARY KEY," +
+                        UserTableInfo.COLUMN_USERNAME + " TEXT," +
                         UserTableInfo.COLUMN_PASSWORD + " TEXT," +
-                        UserTableInfo.COLUMN_EMAIL + " TEXT," +
+                        UserTableInfo.COLUMN_EMAIL + " TEXT PRIMARY KEY," +
                         UserTableInfo.COLUMN_ISLOGGEDIN + " TEXT," +
+                        UserTableInfo.COLUMN_PROGRESS + " TEXT," +
                         UserTableInfo.COLUMN_POINTS + " TEXT)"
 
         private val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " +
@@ -52,11 +53,10 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         values.put(UserTableInfo.COLUMN_EMAIL, user.email)
         values.put(UserTableInfo.COLUMN_POINTS, user.points)
         values.put(UserTableInfo.COLUMN_ISLOGGEDIN, user.isLoggedIn)
-        println("Values in register USER")
-        println(values)
+        values.put(UserTableInfo.COLUMN_PROGRESS, user.progress)
+
         val newRowId = db.insert(UserTableInfo.TABLE_NAME,null, values)
-        println("New Row ID CREATED: ")
-        println(newRowId)
+
         return true
     }
 
@@ -64,84 +64,83 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         val users = ArrayList<SimpleUserRecord>()
         val db = writableDatabase
         var cursor: Cursor? = null
-        println("Before try in login user of DB helper")
-        println(email)
-        println(password)
+
         try {
-            println("IN TRY")
             cursor = db.rawQuery("select * from " +
                     UserTableInfo.TABLE_NAME + " WHERE " +
                     UserTableInfo.COLUMN_EMAIL + "=" + "'" + email + "'" + "", null)
         } catch (e: SQLiteException) {
-            println("IN Catch")
             db.execSQL(SQL_CREATE_ENTRIES)
             return false
         }
-        println("CURSOR")
-        println(cursor)
 
         var emailDB: String? = null
         var passwordDB: String? = null
+        var username: String? = null
 
         if (cursor!!.moveToFirst()) {
             while (cursor.isAfterLast == false) {
                 emailDB = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_EMAIL))
                 passwordDB = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_PASSWORD))
+                username = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_USERNAME))
                 cursor.moveToNext()
             }
         }
-        println("email db db db db:")
-        println(emailDB)
+
         if(email == emailDB && password == passwordDB) {
+            val str:String = "UPDATE "+ UserTableInfo.TABLE_NAME+ " SET "+
+                    UserTableInfo.COLUMN_ISLOGGEDIN + "='" + true +"' WHERE "+
+                    UserTableInfo.COLUMN_USERNAME + "="+ "'"+username+"'"
+            db.execSQL(str)
             return true
         }
         return false
 
     }
 
-
-    fun countNumberOfUsers(): Int {
-//        val modules = ArrayList<DataRecord>()
+    fun updateProgress(progressId: Int, username: String) {
         val db = writableDatabase
-        var cursor: Cursor? = null
-        try {
-            cursor = db.rawQuery("select count(*) from "+ UserTableInfo.TABLE_NAME, null)
-
-        } catch (e: SQLiteException) {
-            db.execSQL(SQL_CREATE_ENTRIES)
-            return 0
-        }
-
-        cursor.moveToFirst()
-        val count: Int = cursor.getInt(0)
-        println("Counted number of users")
-        println(count)
-        cursor.close()
-        return count
+        val str:String = "UPDATE "+ UserTableInfo.TABLE_NAME+ " SET "+
+                UserTableInfo.COLUMN_PROGRESS + "=" + progressId +" WHERE "+
+                UserTableInfo.COLUMN_USERNAME + "="+ "'"+username+"'"
+        db.execSQL(str)
     }
 
+//    fun countNumberOfUsers(): Int {
+//        val modules = ArrayList<DataRecord>()
+//        val db = writableDatabase
+//        var cursor: Cursor? = null
+//        try {
+//            cursor = db.rawQuery("select count(*) from "+ UserTableInfo.TABLE_NAME, null)
+//
+//        } catch (e: SQLiteException) {
+//            db.execSQL(SQL_CREATE_ENTRIES)
+//            return 0
+//        }
+//
+//        cursor.moveToFirst()
+//        val count: Int = cursor.getInt(0)
+//        cursor.close()
+//        return count
+//    }
+
     fun getUsername(): String {
-        var username : String = "Default Name"
         val db = writableDatabase
         var cursor: Cursor? = null
 
         try {
             cursor = db.rawQuery("select * from " +
                     UserTableInfo.TABLE_NAME + " WHERE " +
-                    UserTableInfo.COLUMN_ISLOGGEDIN + "=" + true + "", null)
+                    UserTableInfo.COLUMN_ISLOGGEDIN + "='true'", null)
         } catch (e: SQLiteException) {
             db.execSQL(SQL_CREATE_ENTRIES)
             return "Error fetching username"
         }
-        var isLoggedIn: String
-        var usernameDB: String
+        var username: String = " "
 
         if (cursor!!.moveToFirst()) {
             while (cursor.isAfterLast == false) {
-                isLoggedIn = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_ISLOGGEDIN))
-                usernameDB = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_USERNAME))
-                username = usernameDB
-//                modules.add(DataRecord(course_code, numOfStudents, level))
+                username = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_USERNAME))
                 cursor.moveToNext()
             }
         }
@@ -165,13 +164,15 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         var email: String
         var points: Int
         var isLoggedIn: String
+        var progress: Int
         if (cursor!!.moveToFirst()) {
             while (cursor.isAfterLast == false) {
                 username = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_USERNAME))
                 email = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_EMAIL))
                 points = cursor.getInt(cursor.getColumnIndex(UserTableInfo.COLUMN_POINTS))
                 isLoggedIn = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_ISLOGGEDIN))
-                users.add(SimpleUserRecord(username,points,email, isLoggedIn))
+                progress = cursor.getInt(cursor.getColumnIndex(UserTableInfo.COLUMN_PROGRESS))
+                users.add(SimpleUserRecord(username,points,email, isLoggedIn, progress))
                 cursor.moveToNext()
             }
         }

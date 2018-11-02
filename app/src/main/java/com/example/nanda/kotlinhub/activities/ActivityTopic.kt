@@ -12,9 +12,11 @@ import android.widget.*
 import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section
+import com.example.nanda.kotlinhub.helper.UserDBHelper
 import kotlinx.android.synthetic.main.activity_topic.*
 
 class ActivityTopic : AppCompatActivity() {
+    lateinit var userDBHelper: UserDBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,7 @@ class ActivityTopic : AppCompatActivity() {
 
         displaySection(section1)
 
+        userDBHelper = UserDBHelper(this)
         var i = 1
         val btnNext = findViewById<Button>(R.id.btn_next)
 
@@ -36,6 +39,7 @@ class ActivityTopic : AppCompatActivity() {
         btnNext.setOnClickListener {
             if(i<topic.size) {
                 displaySection(topic[i])
+                userDBHelper.updateProgress(i, "Rachel")
                 i++
             }else{
                 if(hasQuiz == true) {
@@ -45,6 +49,8 @@ class ActivityTopic : AppCompatActivity() {
                 }
             }
         }
+
+
     }
 
     private fun displaySection(section: Section){

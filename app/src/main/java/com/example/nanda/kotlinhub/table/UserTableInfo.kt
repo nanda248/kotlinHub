@@ -10,6 +10,7 @@ class UserTableInfo : BaseColumns {
         val COLUMN_EMAIL = "email"
         val COLUMN_POINTS = "points"
         val COLUMN_ISLOGGEDIN = "isLoggedIn"
+        val COLUMN_PROGRESS = "progress"
         // val COLUMN_PROGRESS is a number which is the id of the topic.
     }
 }

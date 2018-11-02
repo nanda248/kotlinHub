@@ -12,13 +12,18 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.*
 import com.example.nanda.kotlinhub.R
+import com.example.nanda.kotlinhub.helper.UserDBHelper
 import kotlinx.android.synthetic.main.activity_home_page.*
 
 class ActivityHomePage : AppCompatActivity() {
 
+    lateinit var userDBHelper: UserDBHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
+
+        userDBHelper = UserDBHelper(this)
 
         val btnBasicConcept = findViewById<ImageButton>(R.id.btn_basic_concept)
         val btnCO = findViewById<ImageButton>(R.id.btn_class_object)
@@ -30,6 +35,9 @@ class ActivityHomePage : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        val username = userDBHelper.getUsername()
+        val testUsername = findViewById<TextView>(R.id.tv_test_username)
+        testUsername.setText(username)
         btnCO.setOnClickListener {
             showPopupModal()
         }
