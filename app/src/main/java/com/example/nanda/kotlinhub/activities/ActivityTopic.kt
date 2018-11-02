@@ -1,6 +1,8 @@
 package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -17,6 +19,7 @@ import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section
 import com.example.nanda.kotlinhub.helper.UserDBHelper
 import kotlinx.android.synthetic.main.activity_topic.*
+import kotlinx.android.synthetic.main.activity_home_page.*
 
 class ActivityTopic : AppCompatActivity() {
     lateinit var userDBHelper: UserDBHelper
