@@ -38,6 +38,25 @@
     <string name="btn_topic21">Kotlin Data Class</string>
     <string name="btn_topic22">Kotlin Sealed Class</string>
     <string name="btn_topic23">Companion Object</string>
+    <string name="btn_quiz1">Quiz: Kotlin Overview</string>
+    <string name="btn_quiz2">Quiz: Basic Data Types</string>
+    <string name="btn_quiz3">Quiz: Operators</string>
+    <string name="btn_quiz5">Quiz: Expressions &amp; Statements</string>
+    <string name="btn_quiz7">Quiz: Kotlin if Expression</string>
+    <string name="btn_quiz8">Quiz: Kotlin when Expression</string>
+    <string name="btn_quiz9">Quiz: Kotlin while Loop</string>
+    <string name="btn_quiz10">Quiz: Kotlin for Loop</string>
+    <string name="btn_quiz11">Quiz: Kotlin break</string>
+    <string name="btn_quiz13">Quiz: Kotlin function</string>
+    <string name="btn_quiz14">Quiz: Infix Function Call</string>
+    <string name="btn_quiz15">Quiz: Recursion</string>
+    <string name="btn_quiz16">Quiz: Kotlin Class and Objects</string>
+    <string name="btn_quiz17">Quiz: Kotlin Constructors</string>
+    <string name="btn_quiz18">Quiz: Kotlin Inheritance</string>
+    <string name="btn_quiz19">Quiz: Kotlin Abstract Class</string>
+    <string name="btn_quiz20">Quiz: Kotlin Interfaces</string>
+    <string name="btn_quiz21">Quiz: Kotlin Data Class</string>
+    <string name="btn_quiz23">Quiz: Companion Object</string>
 
     <!--input text field names-->
     <string name="tf_username">User Name</string>

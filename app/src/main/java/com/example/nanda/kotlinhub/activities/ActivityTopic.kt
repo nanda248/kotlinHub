@@ -23,6 +23,7 @@ class ActivityTopic : AppCompatActivity() {
         setContentView(R.layout.activity_topic)
 
         var topicFile = intent.getStringExtra("topicFile")
+        var topicNum = intent.getIntExtra("topicNum", 1)
 
         var jsonHelper = JSONHelper(topicFile, this)
         var topic: ArrayList<Section> = jsonHelper.parse()
@@ -41,6 +42,7 @@ class ActivityTopic : AppCompatActivity() {
         val hasQuiz = true
 
         val username = userDBHelper.getUsername()
+        val progress = userDBHelper.getProgress(username)
 
         btnNext.setOnClickListener {
             if(i<topic.size) {
@@ -48,7 +50,9 @@ class ActivityTopic : AppCompatActivity() {
                 displaySection(topic[i])
                 i++
             }else{
-                userDBHelper.updateProgress(i, "cm")
+                if(topicNum>progress){
+                    userDBHelper.updateProgress(topicNum, username)
+                }
                 if(hasQuiz == true) {
                     showPopupModalQuiz()
                 } else {

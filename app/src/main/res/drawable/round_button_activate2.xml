@@ -12,8 +12,8 @@
 
     <item
         android:drawable="@drawable/activate_stage2"
-        android:width="50dp"
-        android:height="50dp"
+        android:width="40dp"
+        android:height="40dp"
         android:gravity="center"/>
 
 </layer-list>

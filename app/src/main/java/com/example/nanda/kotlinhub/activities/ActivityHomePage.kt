@@ -22,29 +22,104 @@ class ActivityHomePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-        userDBHelper = UserDBHelper(this)
-
         val btnBasicConcept = findViewById<ImageButton>(R.id.btn_basic_concept)
-        val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
-        val btnProfilePage = findViewById<ImageButton>(R.id.btn_profile_page)
         val btnFC = findViewById<ImageButton>(R.id.btn_class_object)
         val btnFunction = findViewById<ImageButton>(R.id.btn_function)
         val btnOOP = findViewById<ImageButton>(R.id.btn_miscellaneous)
         val test = findViewById<Button>(R.id.test)
+        val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
+        val btnProfilePage = findViewById<ImageButton>(R.id.btn_profile_page)
+
+        val progBar1 = findViewById<ProgressBar>(R.id.progressBar1)
+        val progBar2 = findViewById<ProgressBar>(R.id.progressBar2)
+        val progBar3 = findViewById<ProgressBar>(R.id.progressBar3)
+        val progBar4 = findViewById<ProgressBar>(R.id.progressBar4)
+
+        userDBHelper = UserDBHelper(this)
+        val username = userDBHelper.getUsername()
+        var progress = userDBHelper.getProgress(username)
+
+        test.text = progress.toString()
+
+        if(progress in 1..5){
+
+            progBar1.setProgress(progress)
+            btnBasicConcept.setBackgroundResource(R.drawable.activate_stage1)
+
+        }else if(progress in 6..11){
+
+            progBar1.setProgress(6)
+            progBar2.setProgress(progress-6)
+            btnBasicConcept.setBackgroundResource(R.drawable.activate_stage1)
+            btnFC.setBackgroundResource(R.drawable.activate_stage1)
+
+        }else if(progress in 12..14){
+
+            progBar1.setProgress(6)
+            progBar2.setProgress(6)
+            progBar3.setProgress(progress-12)
+            btnBasicConcept.setBackgroundResource(R.drawable.activate_stage1)
+            btnFC.setBackgroundResource(R.drawable.activate_stage1)
+            btnFunction.setBackgroundResource(R.drawable.activate_stage1)
+
+        }else if(progress in 15..22){
+
+            progBar1.setProgress(6)
+            progBar2.setProgress(6)
+            progBar3.setProgress(3)
+            progBar4.setProgress(progress-15)
+            btnBasicConcept.setBackgroundResource(R.drawable.activate_stage1)
+            btnFC.setBackgroundResource(R.drawable.activate_stage1)
+            btnFunction.setBackgroundResource(R.drawable.activate_stage1)
+            btnOOP.setBackgroundResource(R.drawable.activate_stage1)
+
+        }else if(progress == 23){
+
+            progBar1.setProgress(6)
+            progBar2.setProgress(6)
+            progBar3.setProgress(3)
+            progBar4.setProgress(8)
+            btnBasicConcept.setBackgroundResource(R.drawable.activate_stage1)
+            btnFC.setBackgroundResource(R.drawable.activate_stage1)
+            btnFunction.setBackgroundResource(R.drawable.activate_stage1)
+            btnOOP.setBackgroundResource(R.drawable.activate_stage1)
+            btn_success.setBackgroundResource(R.drawable.activate_stage2)
+
+        }
+
+
 
         btnBasicConcept.setOnClickListener {
             val myIntent = Intent(this, ActivityBasicConcepts::class.java)
             startActivity(myIntent)
         }
 
-        btnProfilePage.setOnClickListener {
-            val myIntent = Intent(this, ActivityProfilePage::class.java)
-            startActivity(myIntent)
-        }
-        val username = userDBHelper.getUsername()
-
         btnFC.setOnClickListener {
-            showPopupModal()
+            if(progress>=6) {
+                val myIntent = Intent(this, ActivityFlowControl::class.java)
+                startActivity(myIntent)
+            }else{
+                showPopupModal()
+            }
+        }
+
+
+        btnFunction.setOnClickListener {
+            if(progress>=12) {
+                val myIntent = Intent(this, ActivityProfilePage::class.java)
+                startActivity(myIntent)
+            }else{
+                showPopupModal()
+            }
+        }
+
+        btnOOP.setOnClickListener {
+            if(progress>=15) {
+                val myIntent = Intent(this, ActivityProfilePage::class.java)
+                startActivity(myIntent)
+            }else{
+                showPopupModal()
+            }
         }
 
         test.setOnClickListener {

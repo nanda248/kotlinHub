@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".activities.ActivityQuizList">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginHorizontal="40dp"
+        android:src="@drawable/quiz_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent">
+
+            <Button
+                android:id="@+id/btn_quiz1"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz1"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz2"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz2"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz3"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz3"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz5"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz5"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz7"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz7"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz8"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz8"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz9"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz9"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz10"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz10"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz11"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz11"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz13"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz13"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz14"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz14"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz15"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz15"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz16"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz16"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz17"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz17"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz18"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz18"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz19"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz19"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz20"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz20"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz21"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz21"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+            <Button
+                android:id="@+id/btn_quiz23"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz23"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@drawable/button_topic_page"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

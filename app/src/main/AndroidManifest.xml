@@ -12,7 +12,7 @@
         <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activities.register"
             android:screenOrientation="portrait"
@@ -26,13 +26,16 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.manage_user" />
-        <activity android:name="activities.ActivityProfilePage"></activity>
-        <activity android:name=".activities.ActivityQuiz"></activity>
-        <activity android:name=".activities.ActivityProfilePage"></activity>
+        <activity android:name="activities.ActivityProfilePage" />
+        <activity android:name=".activities.ActivityQuiz" />
+        <activity android:name=".activities.ActivityProfilePage" />
+        <activity android:name=".activities.ActivityQuizList" />
+        <activity android:name=".activities.ActivityFlowControl"></activity>
     </application>
 
 </manifest>
