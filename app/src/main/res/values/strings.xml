@@ -12,6 +12,7 @@
     <string name="btn_topic2">Basic Data Types</string>
     <string name="btn_topic3">Control Flow</string>
     <string name="btn_topic4">Visibility Control</string>
+    <string name="btn_close">Close</string>
 
     <!--input text field names-->
     <string name="tf_username">User Name</string>
