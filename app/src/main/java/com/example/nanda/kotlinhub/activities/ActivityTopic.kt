@@ -1,18 +1,9 @@
 package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.transition.Slide
-import android.transition.TransitionManager
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.widget.*
 import android.transition.Slide
 import android.transition.TransitionManager
 import android.view.Gravity
@@ -23,7 +14,6 @@ import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section
 import com.example.nanda.kotlinhub.helper.UserDBHelper
 import kotlinx.android.synthetic.main.activity_topic.*
-import kotlinx.android.synthetic.main.activity_home_page.*
 
 class ActivityTopic : AppCompatActivity() {
     lateinit var userDBHelper: UserDBHelper
@@ -54,9 +44,9 @@ class ActivityTopic : AppCompatActivity() {
             if(i<topic.size) {
                 sectionProgress.progress = (i+1)
                 displaySection(topic[i])
-                userDBHelper.updateProgress(i, "Rachel")
                 i++
             }else{
+                userDBHelper.updateProgress(i, "cm")
                 if(hasQuiz == true) {
                     showPopupModalQuiz()
                 } else {
@@ -123,7 +113,7 @@ class ActivityTopic : AppCompatActivity() {
         }
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Congratulation! You have completed this Level. Do you want to take the quiz now?")
+        tv.setText("Congratulation! You have completed this topic. Do you want to take the quiz now?")
         val btnLater = view.findViewById<Button>(R.id.btn_later)
         val btnYes = view.findViewById<Button>(R.id.btn_yes)
 

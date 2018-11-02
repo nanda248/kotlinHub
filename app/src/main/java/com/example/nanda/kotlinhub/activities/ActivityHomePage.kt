@@ -2,7 +2,6 @@ package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -37,9 +36,8 @@ class ActivityHomePage : AppCompatActivity() {
         }
 
         val username = userDBHelper.getUsername()
-        val testUsername = findViewById<TextView>(R.id.tv_test_username)
-        testUsername.setText(username)
-        btnCO.setOnClickListener {
+
+        btnFC.setOnClickListener {
             showPopupModal()
         }
 
@@ -53,7 +51,7 @@ class ActivityHomePage : AppCompatActivity() {
 
     fun showPopupModal() {
         val inflater:LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflater.inflate(R.layout.popup_layout, null)
+        val view = inflater.inflate(R.layout.popup_layout_locked, null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -75,14 +73,8 @@ class ActivityHomePage : AppCompatActivity() {
         }
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Congratulation! You have completed n Level.")
-        val btnPopup = view.findViewById<Button>(R.id.btn_yay)
-
-        // Set click listener for popup window's text view
-        tv.setOnClickListener{
-            // Change the text color of popup window's text view
-            tv.setTextColor(Color.CYAN)
-        }
+        tv.setText("Complete the previous modules to unlock this one!")
+        val btnPopup = view.findViewById<Button>(R.id.btn_ok)
 
         // Set a click listener for popup's button widget
         btnPopup.setOnClickListener{
@@ -91,9 +83,11 @@ class ActivityHomePage : AppCompatActivity() {
         }
 
         // Set a dismiss listener for popup window
+        /*
         popupWindow.setOnDismissListener {
             Toast.makeText(applicationContext,"Good Job",Toast.LENGTH_SHORT).show()
         }
+        */
 
         TransitionManager.beginDelayedTransition(home_layout)
         popupWindow.showAtLocation(
