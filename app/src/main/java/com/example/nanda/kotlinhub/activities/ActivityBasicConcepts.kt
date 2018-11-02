@@ -61,30 +61,6 @@ class ActivityBasicConcepts : AppCompatActivity() {
             startActivity(myIntent)
         }
 
-        btnOperators.setOnClickListener {
-            val myIntent = Intent(this, ActivityTopic()::class.java)
-            myIntent.putExtra("topicFile", "topic_3")
-            startActivity(myIntent)
-        }
-
-        btnTypeConvertion.setOnClickListener {
-            val myIntent = Intent(this, ActivityTopic()::class.java)
-            myIntent.putExtra("topicFile", "topic_4")
-            startActivity(myIntent)
-        }
-
-        btnES.setOnClickListener {
-            val myIntent = Intent(this, ActivityTopic()::class.java)
-            myIntent.putExtra("topicFile", "topic_5")
-            startActivity(myIntent)
-        }
-
-        btnComment.setOnClickListener {
-            val myIntent = Intent(this, ActivityTopic()::class.java)
-            myIntent.putExtra("topicFile", "topic_6")
-            startActivity(myIntent)
-        }
-
 
     }
 }

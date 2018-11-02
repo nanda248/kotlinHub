@@ -25,6 +25,8 @@ class ActivityTopic : AppCompatActivity() {
         var topicFile = intent.getStringExtra("topicFile")
         var topicNum = intent.getIntExtra("topicNum", 1)
 
+
+
         var jsonHelper = JSONHelper(topicFile, this)
         var topic: ArrayList<Section> = jsonHelper.parse()
         var section1 = topic[0]
@@ -39,10 +41,16 @@ class ActivityTopic : AppCompatActivity() {
         var i = 1
         val btnNext = findViewById<Button>(R.id.btn_next)
 
-        val hasQuiz = true
+        var hasQuiz = true
+        val topicWithoutQuiz = intArrayOf(4, 6, 12, 22)
+        if(topicNum in topicWithoutQuiz){
+            hasQuiz = false
+        }
 
         val username = userDBHelper.getUsername()
         val progress = userDBHelper.getProgress(username)
+
+        //Toast.makeText(this, "Topic: " + topicNum + " Progress: " + progress, Toast.LENGTH_LONG).show()
 
         btnNext.setOnClickListener {
             if(i<topic.size) {
@@ -170,8 +178,8 @@ class ActivityTopic : AppCompatActivity() {
         }
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Congratulation! You have completed this Level.")
-        val btnPopup = view.findViewById<Button>(R.id.btn_later)
+        tv.setText("Well done! You have completed this topic!")
+        val btnPopup = view.findViewById<Button>(R.id.btn_yay)
 
 
         // Set a click listener for popup's button widget

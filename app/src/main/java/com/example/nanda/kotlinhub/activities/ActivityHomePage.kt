@@ -87,7 +87,15 @@ class ActivityHomePage : AppCompatActivity() {
 
         }
 
+        btnLessonPage.setOnClickListener{
+            finish()
+            startActivity(getIntent())
+        }
 
+        btnProfilePage.setOnClickListener {
+            val myIntent = Intent(this, ActivityProfilePage::class.java)
+            startActivity(myIntent)
+        }
 
         btnBasicConcept.setOnClickListener {
             val myIntent = Intent(this, ActivityBasicConcepts::class.java)
@@ -121,6 +129,8 @@ class ActivityHomePage : AppCompatActivity() {
                 showPopupModal()
             }
         }
+
+
 
         test.setOnClickListener {
             val myIntent = Intent(this, ActivityQuiz::class.java)
