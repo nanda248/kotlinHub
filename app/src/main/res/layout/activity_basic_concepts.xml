@@ -36,122 +36,186 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal"
-        android:background="@drawable/button_topic_page">
+        android:layout_weight="4">
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/overview"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_topic1"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/btn_topic1"
-            android:textSize="6pt"
-            android:textAlignment="textStart"
-            android:background="@android:color/transparent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/overview"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal"
-        android:background="@drawable/button_topic_page">
+                <Button
+                    android:id="@+id/btn_topic1"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic1"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/basic_type"/>
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_topic2"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/btn_topic2"
-            android:textSize="6pt"
-            android:textAlignment="textStart"
-            android:background="@android:color/transparent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/basic_type"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal"
-        android:background="@drawable/button_topic_page">
+                <Button
+                    android:id="@+id/btn_topic2"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic2"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/flow_control"/>
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_topic3"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/btn_topic3"
-            android:textSize="6pt"
-            android:textAlignment="textStart"
-            android:background="@android:color/transparent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/flow_control"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal"
-        android:background="@drawable/button_topic_page">
+                <Button
+                    android:id="@+id/btn_topic3"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic3"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/visibility"/>
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_topic4"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/btn_topic4"
-            android:textSize="6pt"
-            android:textAlignment="textStart"
-            android:background="@android:color/transparent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/visibility"/>
 
+                <Button
+                    android:id="@+id/btn_topic4"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic4"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/visibility"/>
+
+                <Button
+                    android:id="@+id/btn_topic5"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic5"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/visibility"/>
+
+                <Button
+                    android:id="@+id/btn_topic6"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic5"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
