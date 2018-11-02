@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".activities.ActivityProfilePage">
 
 
@@ -88,7 +89,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/gold"
-                android:text="@string/btn_home" />
+                android:text="@string/btn_profile" />
 
             <Button
                 android:id="@+id/btn_lesson"

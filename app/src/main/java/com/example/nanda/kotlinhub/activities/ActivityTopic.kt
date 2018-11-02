@@ -1,7 +1,6 @@
 package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -13,7 +12,7 @@ import android.widget.*
 import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section
-import kotlinx.android.synthetic.main.activity_home_page.*
+import kotlinx.android.synthetic.main.activity_topic.*
 
 class ActivityTopic : AppCompatActivity() {
 
@@ -32,13 +31,18 @@ class ActivityTopic : AppCompatActivity() {
         var i = 1
         val btnNext = findViewById<Button>(R.id.btn_next)
 
+        val hasQuiz = true
 
         btnNext.setOnClickListener {
             if(i<topic.size) {
                 displaySection(topic[i])
                 i++
             }else{
-                showPopupModal()
+                if(hasQuiz == true) {
+                    showPopupModalQuiz()
+                } else {
+                    showPopupModalNoQuiz()
+                }
             }
         }
     }
@@ -74,7 +78,58 @@ class ActivityTopic : AppCompatActivity() {
         }
     }
 
-    fun showPopupModal() {
+    fun showPopupModalQuiz() {
+        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = inflater.inflate(R.layout.popup_layout_with_quiz, null)
+        val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            popupWindow.elevation = 10.0F
+        }
+
+        // If API level 23 or higher then execute the code
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            // Create a new slide animation for popup window enter transition
+            val slideIn = Slide()
+            slideIn.slideEdge = Gravity.TOP
+            popupWindow.enterTransition = slideIn
+
+            // Slide animation for popup window exit transition
+            val slideOut = Slide()
+            slideOut.slideEdge = Gravity.RIGHT
+            popupWindow.exitTransition = slideOut
+
+        }
+
+        val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
+        tv.setText("Congratulation! You have completed this Level. Do you want to take the quiz now?")
+        val btnLater = view.findViewById<Button>(R.id.btn_later)
+        val btnYes = view.findViewById<Button>(R.id.btn_yes)
+
+        btnYes.setOnClickListener {
+            // Go to Quiz page (remove the line below)
+            popupWindow.dismiss()
+        }
+
+
+        btnLater.setOnClickListener{
+            popupWindow.dismiss()
+        }
+
+        popupWindow.setOnDismissListener {
+            Toast.makeText(applicationContext,"Good Job", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+
+        TransitionManager.beginDelayedTransition(topic_layout)
+        popupWindow.showAtLocation(
+                topic_layout,
+                Gravity.CENTER,
+                0,0
+        )
+    }
+
+    fun showPopupModalNoQuiz() {
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.popup_layout, null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
@@ -98,14 +153,9 @@ class ActivityTopic : AppCompatActivity() {
         }
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Congratulation! You have completed n Level.")
-        val btnPopup = view.findViewById<Button>(R.id.btn_popup_close)
+        tv.setText("Congratulation! You have completed this Level.")
+        val btnPopup = view.findViewById<Button>(R.id.btn_later)
 
-        // Set click listener for popup window's text view
-        tv.setOnClickListener{
-            // Change the text color of popup window's text view
-            tv.setTextColor(Color.CYAN)
-        }
 
         // Set a click listener for popup's button widget
         btnPopup.setOnClickListener{
@@ -116,12 +166,12 @@ class ActivityTopic : AppCompatActivity() {
         // Set a dismiss listener for popup window
         popupWindow.setOnDismissListener {
             Toast.makeText(applicationContext,"Good Job", Toast.LENGTH_SHORT).show()
-//            finish()
+            finish()
         }
 
-        TransitionManager.beginDelayedTransition(home_layout)
+        TransitionManager.beginDelayedTransition(topic_layout)
         popupWindow.showAtLocation(
-                home_layout,
+                topic_layout,
                 Gravity.CENTER,
                 0,0
         )

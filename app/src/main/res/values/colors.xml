@@ -6,6 +6,8 @@
     <color name="btnColorPrimary">#008B8B</color>
     <color name="backgroundColor">#191970</color>
 
+    <color name="limeGreen">#32CD32</color>
+    <color name="lightGreen">#90EE90</color>
     <color name="gold">#FFD700</color>
     <color name="darkBlue">#008B8B</color>
     <color name="lightBlue">#87cefa</color>

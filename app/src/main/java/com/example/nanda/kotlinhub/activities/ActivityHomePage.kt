@@ -61,7 +61,7 @@ class ActivityHomePage : AppCompatActivity() {
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Congratulation! You have completed n Level.")
-        val btnPopup = view.findViewById<Button>(R.id.btn_popup_close)
+        val btnPopup = view.findViewById<Button>(R.id.btn_yay)
 
         // Set click listener for popup window's text view
         tv.setOnClickListener{
