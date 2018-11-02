@@ -1,7 +1,6 @@
 package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -39,9 +38,6 @@ class ActivityTopic : AppCompatActivity() {
                 displaySection(topic[i])
                 i++
             }else{
-                val myIntent = Intent()
-                myIntent.putExtra("Continent","Asia")
-                setResult(Activity.RESULT_OK, myIntent)
                 showPopupModal()
             }
         }

@@ -39,7 +39,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.manage_user" />
         <activity android:name=".listview_users" />
-        <activity android:name=".ActivityProfilePage"></activity>
+        <activity android:name=".activities.ActivityProfilePage"></activity>
     </application>
 
 </manifest>

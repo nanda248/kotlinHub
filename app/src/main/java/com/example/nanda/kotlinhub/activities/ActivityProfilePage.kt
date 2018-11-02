@@ -1,7 +1,8 @@
-package com.example.nanda.kotlinhub
+package com.example.nanda.kotlinhub.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.nanda.kotlinhub.R
 
 class ActivityProfilePage : AppCompatActivity() {
 
