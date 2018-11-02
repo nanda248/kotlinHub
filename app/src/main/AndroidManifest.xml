@@ -17,9 +17,6 @@
             android:name=".activities.register"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".activities.user_home"
-            android:screenOrientation="portrait" />
         <activity android:name=".activities.ActivityTestReadText" />
         <activity android:name=".activities.ActivityHomePage" />
         <activity android:name=".activities.ActivityTopic" />
@@ -33,12 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.user_profile"
-            android:label="@string/title_activity_user_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.manage_user" />
-        <activity android:name=".listview_users" />
         <activity android:name=".activities.ActivityProfilePage"></activity>
     </application>
 

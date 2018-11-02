@@ -150,7 +150,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/btn_lesson"
+            android:id="@+id/btn_lesson_page"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
@@ -160,7 +160,7 @@
             android:background="@drawable/rectangle_button_lesson" />
 
         <ImageButton
-            android:id="@+id/btn_profile"
+            android:id="@+id/btn_profile_page"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"

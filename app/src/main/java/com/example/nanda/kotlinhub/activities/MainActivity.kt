@@ -18,13 +18,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val btnLogIn = findViewById<Button>(R.id.btn_login)
-//        btnLogIn.setOnClickListener {
-//            addUser()
-//            val myIntent = Intent(this, MainPage::class.java)
-//            startActivity(myIntent)
-//        }
+        userDBHelper = UserDBHelper(this)
 
+        val result = userDBHelper.verifyLogin()
+        if(result == true) {
+            val myIntent = Intent(this, ActivityHomePage::class.java)
+            startActivity(myIntent)
+        }
         val goToRegisterPage = findViewById<TextView>(R.id.registerNewAccount)
         goToRegisterPage.setOnClickListener {
             val myIntent = Intent(this, register::class.java)
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
-        userDBHelper = UserDBHelper(this)
+
     }
 
 //    fun addUser() {

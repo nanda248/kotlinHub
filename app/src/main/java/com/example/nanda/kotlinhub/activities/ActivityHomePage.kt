@@ -29,15 +29,22 @@ class ActivityHomePage : AppCompatActivity() {
         val btnCO = findViewById<ImageButton>(R.id.btn_class_object)
         val btnFun = findViewById<ImageButton>(R.id.btn_function)
         val btnMiscell = findViewById<ImageButton>(R.id.btn_miscellaneous)
+        val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
+        val btnProfilePage = findViewById<ImageButton>(R.id.btn_profile_page)
 
         btnBasicConcept.setOnClickListener {
             val myIntent = Intent(this, ActivityBasicConcepts::class.java)
             startActivity(myIntent)
         }
 
-        val username = userDBHelper.getUsername()
-        val testUsername = findViewById<TextView>(R.id.tv_test_username)
-        testUsername.setText(username)
+        btnProfilePage.setOnClickListener {
+            val myIntent = Intent(this, ActivityProfilePage::class.java)
+            startActivity(myIntent)
+        }
+
+//        val username = userDBHelper.getUsername()
+//        val testUsername = findViewById<TextView>(R.id.tv_test_username)
+//        testUsername.setText(username)
         btnCO.setOnClickListener {
             showPopupModal()
         }

@@ -36,10 +36,12 @@ class ActivityTopic : AppCompatActivity() {
 
         val hasQuiz = true
 
+        val username = userDBHelper.getUsername()
+
         btnNext.setOnClickListener {
             if(i<topic.size) {
                 displaySection(topic[i])
-                userDBHelper.updateProgress(i, "Rachel")
+                userDBHelper.updateProgress(i, username)
                 i++
             }else{
                 if(hasQuiz == true) {

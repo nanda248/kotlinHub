@@ -30,8 +30,7 @@ class register : AppCompatActivity() {
         val btnGetAllUsers = findViewById<Button>(R.id.btn_get_users)
         btnGetAllUsers.setOnClickListener {
             val allUsers = userDBHelper.getAllUsers()
-            println("GETTING ALL USERS :::: YAY::: ")
-            println(allUsers)
+
             val textView = findViewById<TextView>(R.id.tv_display_users)
             var str: String? = null
             str = "Fetched " + allUsers.size + " users:  \n"

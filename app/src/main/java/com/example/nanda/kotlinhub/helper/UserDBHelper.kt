@@ -61,7 +61,6 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
     }
 
     fun loginUser(email: String, password: String): Boolean{
-        val users = ArrayList<SimpleUserRecord>()
         val db = writableDatabase
         var cursor: Cursor? = null
 
@@ -95,7 +94,46 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
             return true
         }
         return false
+    }
 
+    fun logoutUser(username: String){
+        val db = writableDatabase
+        val str:String = "UPDATE "+ UserTableInfo.TABLE_NAME+ " SET "+
+                UserTableInfo.COLUMN_ISLOGGEDIN + "='false' WHERE "+
+                UserTableInfo.COLUMN_USERNAME + "="+ "'"+username+"'"
+        db.execSQL(str)
+    }
+
+    fun verifyLogin(): Boolean{
+        val db = writableDatabase
+        var cursor: Cursor? = null
+
+        try {
+            cursor = db.rawQuery("select * from " +
+                    UserTableInfo.TABLE_NAME + " WHERE " +
+                    UserTableInfo.COLUMN_ISLOGGEDIN + "='true'", null)
+        } catch (e: SQLiteException) {
+            db.execSQL(SQL_CREATE_ENTRIES)
+            return false
+        }
+
+        var username: String = " "
+
+        if (cursor!!.moveToFirst()) {
+            while (cursor.isAfterLast == false) {
+                username = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_USERNAME))
+                cursor.moveToNext()
+            }
+        }
+
+        println("CHECKING IF THERE IS LOGIN USER OR NOT")
+        println(username)
+
+        if(username != " "){
+            return true
+        }
+
+        return false
     }
 
     fun updateProgress(progressId: Int, username: String) {
@@ -104,6 +142,30 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                 UserTableInfo.COLUMN_PROGRESS + "=" + progressId +" WHERE "+
                 UserTableInfo.COLUMN_USERNAME + "="+ "'"+username+"'"
         db.execSQL(str)
+    }
+
+    fun getProgress(username: String): Int {
+        val db = writableDatabase
+        var cursor: Cursor? = null
+
+        try {
+            cursor = db.rawQuery("select * from " +
+                    UserTableInfo.TABLE_NAME + " WHERE " +
+                    UserTableInfo.COLUMN_ISLOGGEDIN + "='true'", null)
+        } catch (e: SQLiteException) {
+            db.execSQL(SQL_CREATE_ENTRIES)
+            return 0
+        }
+        var progress: Int = 0
+
+        if (cursor!!.moveToFirst()) {
+            while (cursor.isAfterLast == false) {
+                progress = cursor.getInt(cursor.getColumnIndex(UserTableInfo.COLUMN_PROGRESS))
+                cursor.moveToNext()
+            }
+        }
+
+        return progress
     }
 
 //    fun countNumberOfUsers(): Int {
