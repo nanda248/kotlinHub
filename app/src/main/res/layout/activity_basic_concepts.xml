@@ -207,7 +207,7 @@
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic5"
+                    android:text="@string/btn_topic6"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>

@@ -13,6 +13,11 @@ import android.transition.TransitionManager
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.*
+import android.transition.Slide
+import android.transition.TransitionManager
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.widget.*
 import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section

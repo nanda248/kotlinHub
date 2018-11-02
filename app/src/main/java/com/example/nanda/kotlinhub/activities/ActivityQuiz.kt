@@ -27,43 +27,47 @@ class ActivityQuiz : AppCompatActivity() {
         var ans = qnAns1.getAns()
 
         var index = 1
-        var max = quiz.size + 1
+        var max = quiz.size
+
 
         val correctBuilder = AlertDialog.Builder(this@ActivityQuiz)
         correctBuilder.setTitle("You are correct!")
         correctBuilder.setPositiveButton("NEXT"){dialog, which ->
             if(index<max){
+                //radio_group.clearCheck()
+                ans = quiz[index].getAns()
                 displayQnAns(quiz[index])
-                ans = quiz[index].getAns() //assign new value to ans variable
+                 //assign new value to ans variable
                 index++
+
             }else{
                 finish()
             }
         }
         val correctDialog: AlertDialog = correctBuilder.create()
 
-        val wrongBuilder = AlertDialog.Builder(this@ActivityQuiz)
-        wrongBuilder.setTitle("Correct solution: " + ans)
-        wrongBuilder.setPositiveButton("NEXT"){dialog, which ->
-            if(index<max){
-                displayQnAns(quiz[index])
-                ans = quiz[index].getAns()
-                index++
-            }else{
-                finish()
-            }
-        }
-        val wrongDialog: AlertDialog = wrongBuilder.create()
-
         val radio_group = findViewById<RadioGroup>(R.id.options)
         radio_group.setOnCheckedChangeListener(
                 RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val selected: RadioButton = findViewById(checkedId)
+                    val selected: RadioButton = findViewById<RadioButton>(checkedId)
 
                     if(checkedId == R.id.rb_A){
                         if(ans.equals("A")){
                             correctDialog.show()
                         }else{
+                            val wrongBuilder = AlertDialog.Builder(this@ActivityQuiz)
+                            wrongBuilder.setTitle("Correct solution: " + ans)
+                            wrongBuilder.setPositiveButton("NEXT"){dialog, which ->
+                                if(index<max){
+                                    ans = quiz[index].getAns()
+                                    displayQnAns(quiz[index])
+                                    index++
+
+                                }else{
+                                    finish()
+                                }
+                            }
+                            val wrongDialog: AlertDialog = wrongBuilder.create()
                             wrongDialog.show()
                         }
                     }
@@ -72,6 +76,19 @@ class ActivityQuiz : AppCompatActivity() {
                         if(ans.equals("B")){
                             correctDialog.show()
                         }else{
+                            val wrongBuilder = AlertDialog.Builder(this@ActivityQuiz)
+                            wrongBuilder.setTitle("Correct solution: " + ans)
+                            wrongBuilder.setPositiveButton("NEXT"){dialog, which ->
+                                if(index<max){
+                                    ans = quiz[index].getAns()
+                                    displayQnAns(quiz[index])
+                                    index++
+
+                                }else{
+                                    finish()
+                                }
+                            }
+                            val wrongDialog: AlertDialog = wrongBuilder.create()
                             wrongDialog.show()
                         }
                     }
@@ -80,6 +97,19 @@ class ActivityQuiz : AppCompatActivity() {
                         if(ans.equals("C")){
                             correctDialog.show()
                         }else{
+                            val wrongBuilder = AlertDialog.Builder(this@ActivityQuiz)
+                            wrongBuilder.setTitle("Correct solution: " + ans)
+                            wrongBuilder.setPositiveButton("NEXT"){dialog, which ->
+                                if(index<max){
+                                    ans = quiz[index].getAns()
+                                    displayQnAns(quiz[index])
+                                    index++
+
+                                }else{
+                                    finish()
+                                }
+                            }
+                            val wrongDialog: AlertDialog = wrongBuilder.create()
                             wrongDialog.show()
                         }
                     }
@@ -88,9 +118,24 @@ class ActivityQuiz : AppCompatActivity() {
                         if(ans.equals("D")){
                             correctDialog.show()
                         }else{
+                            val wrongBuilder = AlertDialog.Builder(this@ActivityQuiz)
+                            wrongBuilder.setTitle("Correct solution: " + ans)
+                            wrongBuilder.setPositiveButton("NEXT"){dialog, which ->
+                                if(index<max){
+                                    ans = quiz[index].getAns()
+                                    displayQnAns(quiz[index])
+                                    index++
+
+                                }else{
+                                    finish()
+                                }
+                            }
+                            val wrongDialog: AlertDialog = wrongBuilder.create()
                             wrongDialog.show()
                         }
                     }
+
+                    selected.isChecked = false
 
                 })
 
@@ -132,5 +177,7 @@ class ActivityQuiz : AppCompatActivity() {
 
         val rbD = findViewById<RadioButton>(R.id.rb_D)
         rbD.text = optD
+
     }
+
 }
