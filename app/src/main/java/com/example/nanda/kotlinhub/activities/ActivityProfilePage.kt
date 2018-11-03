@@ -33,6 +33,12 @@ class ActivityProfilePage : AppCompatActivity() {
         val str = "Progress: " + progress.toString()
         tv_progress.setText(str)
 
+        val btnQuiz = findViewById<Button>(R.id.btn_quiz)
+        btnQuiz.setOnClickListener {
+            val myIntent = Intent(this, ActivityQuizList::class.java)
+            startActivity(myIntent)
+        }
+
         val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
         btnLessonPage.setOnClickListener {
             val myIntent = Intent(this, ActivityHomePage::class.java)
