@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.ActivityBasicConcepts">
-
+    tools:context=".activities.ActivityOOP">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +28,7 @@
             android:layout_weight="2"
             android:textAlignment="textStart"
             android:gravity="center|start"
-            android:text="Basic Concepts"
+            android:text="Object-Oriented Programming"
             android:textStyle="bold"
             android:textSize="12pt"/>
 
@@ -62,11 +61,11 @@
                     android:src="@drawable/overview"/>
 
                 <Button
-                    android:id="@+id/btn_topic1"
+                    android:id="@+id/btn_topic16"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic1"
+                    android:text="@string/btn_topic16"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -90,11 +89,11 @@
                     android:src="@drawable/basic_type"/>
 
                 <Button
-                    android:id="@+id/btn_topic2"
+                    android:id="@+id/btn_topic17"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic2"
+                    android:text="@string/btn_topic17"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -118,11 +117,11 @@
                     android:src="@drawable/flow_control"/>
 
                 <Button
-                    android:id="@+id/btn_topic3"
+                    android:id="@+id/btn_topic18"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic3"
+                    android:text="@string/btn_topic18"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -146,11 +145,11 @@
                     android:src="@drawable/visibility"/>
 
                 <Button
-                    android:id="@+id/btn_topic4"
+                    android:id="@+id/btn_topic19"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic4"
+                    android:text="@string/btn_topic19"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -174,11 +173,11 @@
                     android:src="@drawable/visibility"/>
 
                 <Button
-                    android:id="@+id/btn_topic5"
+                    android:id="@+id/btn_topic20"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic5"
+                    android:text="@string/btn_topic20"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -202,11 +201,67 @@
                     android:src="@drawable/visibility"/>
 
                 <Button
-                    android:id="@+id/btn_topic6"
+                    android:id="@+id/btn_topic21"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic6"
+                    android:text="@string/btn_topic21"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/visibility"/>
+
+                <Button
+                    android:id="@+id/btn_topic22"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic22"
+                    android:textSize="6pt"
+                    android:textAlignment="textStart"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_topic_page">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/visibility"/>
+
+                <Button
+                    android:id="@+id/btn_topic23"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/btn_topic23"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>

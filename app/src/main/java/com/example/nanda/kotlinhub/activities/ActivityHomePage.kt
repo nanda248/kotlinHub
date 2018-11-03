@@ -114,7 +114,7 @@ class ActivityHomePage : AppCompatActivity() {
 
         btnFunction.setOnClickListener {
             if(progress>=12) {
-                val myIntent = Intent(this, ActivityProfilePage::class.java)
+                val myIntent = Intent(this, ActivityFunction::class.java)
                 startActivity(myIntent)
             }else{
                 showPopupModal()
@@ -123,7 +123,7 @@ class ActivityHomePage : AppCompatActivity() {
 
         btnOOP.setOnClickListener {
             if(progress>=15) {
-                val myIntent = Intent(this, ActivityProfilePage::class.java)
+                val myIntent = Intent(this, ActivityOOP::class.java)
                 startActivity(myIntent)
             }else{
                 showPopupModal()

@@ -18,23 +18,46 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".activities.ActivityTestReadText" />
-        <activity android:name=".activities.ActivityHomePage" />
-        <activity android:name=".activities.ActivityTopic" />
-        <activity android:name=".activities.ActivityBasicConcepts" />
+        <activity
+            android:name=".activities.ActivityHomePage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityTopic"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityBasicConcepts"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.ActivityLaunchScreen"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.manage_user" />
-        <activity android:name="activities.ActivityProfilePage" />
-        <activity android:name=".activities.ActivityQuiz" />
-        <activity android:name=".activities.ActivityProfilePage" />
-        <activity android:name=".activities.ActivityQuizList" />
-        <activity android:name=".activities.ActivityFlowControl"></activity>
+        <activity
+            android:name="activities.ActivityProfilePage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityQuiz"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityProfilePage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityQuizList"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityFlowControl"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityFunction"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.ActivityOOP"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.UserDBHelper
@@ -31,5 +32,11 @@ class ActivityProfilePage : AppCompatActivity() {
         val progress = userDBHelper.getProgress(username)
         val str = "Progress: " + progress.toString()
         tv_progress.setText(str)
+
+        val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
+        btnLessonPage.setOnClickListener {
+            val myIntent = Intent(this, ActivityHomePage::class.java)
+            startActivity(myIntent)
+        }
     }
 }

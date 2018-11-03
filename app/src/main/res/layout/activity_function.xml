@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.ActivityBasicConcepts">
-
+    android:background="@color/white"
+    tools:context=".activities.ActivityFunction">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_weight="2"
             android:textAlignment="textStart"
             android:gravity="center|start"
-            android:text="Basic Concepts"
+            android:text="Functions"
             android:textStyle="bold"
             android:textSize="12pt"/>
 
@@ -62,11 +62,11 @@
                     android:src="@drawable/overview"/>
 
                 <Button
-                    android:id="@+id/btn_topic1"
+                    android:id="@+id/btn_topic13"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic1"
+                    android:text="@string/btn_topic13"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -90,11 +90,11 @@
                     android:src="@drawable/basic_type"/>
 
                 <Button
-                    android:id="@+id/btn_topic2"
+                    android:id="@+id/btn_topic14"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic2"
+                    android:text="@string/btn_topic14"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -118,95 +118,11 @@
                     android:src="@drawable/flow_control"/>
 
                 <Button
-                    android:id="@+id/btn_topic3"
+                    android:id="@+id/btn_topic15"
                     android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic3"
-                    android:textSize="6pt"
-                    android:textAlignment="textStart"
-                    android:background="@android:color/transparent"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                android:background="@drawable/button_topic_page">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
-
-                <Button
-                    android:id="@+id/btn_topic4"
-                    android:layout_width="320dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic4"
-                    android:textSize="6pt"
-                    android:textAlignment="textStart"
-                    android:background="@android:color/transparent"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                android:background="@drawable/button_topic_page">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
-
-                <Button
-                    android:id="@+id/btn_topic5"
-                    android:layout_width="320dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic5"
-                    android:textSize="6pt"
-                    android:textAlignment="textStart"
-                    android:background="@android:color/transparent"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                android:background="@drawable/button_topic_page">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
-
-                <Button
-                    android:id="@+id/btn_topic6"
-                    android:layout_width="320dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:text="@string/btn_topic6"
+                    android:text="@string/btn_topic15"
                     android:textSize="6pt"
                     android:textAlignment="textStart"
                     android:background="@android:color/transparent"/>
@@ -216,5 +132,6 @@
         </LinearLayout>
 
     </ScrollView>
+
 
 </LinearLayout>
