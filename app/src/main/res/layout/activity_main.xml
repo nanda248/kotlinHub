@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/kotlin_hub_text_logo" />
+            app:srcCompat="@drawable/app_logo_green" />
 
     </LinearLayout>
 
@@ -53,6 +53,7 @@
             android:ems="10"
             android:inputType="textEmailAddress"
             android:textColorHint="@color/grey"
+            android:backgroundTint="@color/limeGreen"
             android:hint="@string/tf_email"/>
 
         <EditText
@@ -62,6 +63,7 @@
             android:ems="10"
             android:inputType="textPassword"
             android:textColorHint="@color/grey"
+            android:backgroundTint="@color/limeGreen"
             android:hint="@string/tf_password"/>
 
         <Button
@@ -69,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="40dp"
-            android:background="@color/btnColorPrimary"
+            android:background="@color/forestGreen"
             android:text="@string/btn_log_in"
             tools:layout_editor_absoluteX="147dp"
             tools:layout_editor_absoluteY="177dp" />

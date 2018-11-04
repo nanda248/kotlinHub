@@ -12,7 +12,7 @@
         <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activities.register"
             android:screenOrientation="portrait"
@@ -31,7 +31,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.manage_user" />
-        <activity android:name=".activities.ActivityProfilePage"></activity>
+        <activity android:name=".activities.ActivityProfilePage" />
+        <activity android:name=".activities.ActivityResource"></activity>
     </application>
 
 </manifest>

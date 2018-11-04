@@ -126,9 +126,6 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
             }
         }
 
-        println("CHECKING IF THERE IS LOGIN USER OR NOT")
-        println(username)
-
         if(username != " "){
             return true
         }
@@ -144,7 +141,7 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         db.execSQL(str)
     }
 
-    fun getProgress(username: String): Int {
+    fun getProgress(): Int {
         val db = writableDatabase
         var cursor: Cursor? = null
 
@@ -206,8 +203,30 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                 cursor.moveToNext()
             }
         }
-
         return username
+    }
+
+    fun getEmail(): String {
+        val db = writableDatabase
+        var cursor: Cursor? = null
+
+        try {
+            cursor = db.rawQuery("select * from " +
+                    UserTableInfo.TABLE_NAME + " WHERE " +
+                    UserTableInfo.COLUMN_ISLOGGEDIN + "='true'", null)
+        } catch (e: SQLiteException) {
+            db.execSQL(SQL_CREATE_ENTRIES)
+            return "Error fetching username"
+        }
+        var email: String = " "
+
+        if (cursor!!.moveToFirst()) {
+            while (cursor.isAfterLast == false) {
+                email = cursor.getString(cursor.getColumnIndex(UserTableInfo.COLUMN_EMAIL))
+                cursor.moveToNext()
+            }
+        }
+        return email
     }
 
     fun getAllUsers(): ArrayList<SimpleUserRecord> {
@@ -241,9 +260,5 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         return users
 
     }
-
-//    fun readUser(): Boolean {
-//
-//    }
 
 }
