@@ -3,7 +3,6 @@ package com.example.nanda.kotlinhub.activities
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.UserDBHelper
@@ -27,22 +26,22 @@ class register : AppCompatActivity() {
             }
         }
 
-        val btnGetAllUsers = findViewById<Button>(R.id.btn_get_users)
-        btnGetAllUsers.setOnClickListener {
-            val allUsers = userDBHelper.getAllUsers()
-
-            val textView = findViewById<TextView>(R.id.tv_display_users)
-            var str: String? = null
-            str = "Fetched " + allUsers.size + " users:  \n"
-            textView.setText("All Users: " + str)
-
-            var usersList: String? = null
-            allUsers.forEach{
-                usersList = it.email.toString() + " - " + it.username.toString() +" - " + it.progress.toString() + "\n"
-                textView.append(usersList)
-                usersList = ""
-            }
-        }
+//        val btnGetAllUsers = findViewById<Button>(R.id.btn_get_users)
+//        btnGetAllUsers.setOnClickListener {
+//            val allUsers = userDBHelper.getAllUsers()
+//
+//            val textView = findViewById<TextView>(R.id.tv_display_users)
+//            var str: String? = null
+//            str = "Fetched " + allUsers.size + " users:  \n"
+//            textView.setText("All Users: " + str)
+//
+//            var usersList: String? = null
+//            allUsers.forEach{
+//                usersList = it.email.toString() + " - " + it.username.toString() +" - " + it.progress.toString() + "\n"
+//                textView.append(usersList)
+//                usersList = ""
+//            }
+//        }
 
         userDBHelper = UserDBHelper(this)
     }
