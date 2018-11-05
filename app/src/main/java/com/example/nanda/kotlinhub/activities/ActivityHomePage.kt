@@ -36,8 +36,7 @@ class ActivityHomePage : AppCompatActivity() {
         val progBar4 = findViewById<ProgressBar>(R.id.progressBar4)
 
         userDBHelper = UserDBHelper(this)
-        val username = userDBHelper.getUsername()
-        var progress = userDBHelper.getProgress(username)
+        var progress = userDBHelper.getProgress()
 
         test.text = progress.toString()
 

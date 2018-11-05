@@ -26,8 +26,7 @@ class ActivityFunction : AppCompatActivity() {
         setContentView(R.layout.activity_function)
 
         userDBHelper = UserDBHelper(this)
-        val username = userDBHelper.getUsername()
-        var progress = userDBHelper.getProgress(username)
+        var progress = userDBHelper.getProgress()
 
         val btnFun = findViewById<Button>(R.id.btn_topic13)
         val btnInfix = findViewById<Button>(R.id.btn_topic14)

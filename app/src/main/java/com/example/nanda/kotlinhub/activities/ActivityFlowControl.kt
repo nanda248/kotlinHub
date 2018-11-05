@@ -26,8 +26,7 @@ class ActivityFlowControl : AppCompatActivity() {
         setContentView(R.layout.activity_flow_control)
 
         userDBHelper = UserDBHelper(this)
-        val username = userDBHelper.getUsername()
-        var progress = userDBHelper.getProgress(username)
+        var progress = userDBHelper.getProgress()
 
         val btnIf = findViewById<Button>(R.id.btn_topic7)
         val btnWhen = findViewById<Button>(R.id.btn_topic8)

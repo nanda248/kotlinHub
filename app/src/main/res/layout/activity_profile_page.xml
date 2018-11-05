@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
-        android:background="@color/darkBlue"
+        android:background="@color/grey"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -23,7 +23,6 @@
             android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-50dp"
             android:layout_weight="1"
             android:src="@drawable/user_img" />
 
@@ -31,6 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="3"
             android:orientation="vertical">
 
@@ -38,7 +38,8 @@
                 android:id="@+id/tv_name_field"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="serif"
                 android:text="Name: sample"
                 android:textSize="20sp" />
 
@@ -46,7 +47,8 @@
                 android:id="@+id/tv_email_field"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="serif"
                 android:text="Email: sample@email.com"
                 android:textSize="20sp" />
 
@@ -54,7 +56,7 @@
                 android:id="@+id/tv_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="serif"
                 android:text="Progress: -1"
                 android:textSize="20sp" />
 
@@ -68,37 +70,119 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/button_topic_page">
 
-        <Button
-            android:id="@+id/btn_resource"
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/video_resource"/>
+
+            <Button
+                android:id="@+id/btn_resource"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_resource"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="20dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/forestGreen"
-            android:drawableLeft="@android:drawable/ic_menu_view"
-            android:text="@string/btn_resource" />
-        <Button
-            android:id="@+id/btn_quiz"
+            android:orientation="horizontal"
+            android:background="@drawable/button_topic_page">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/quiz"/>
+
+            <Button
+                android:id="@+id/btn_quiz"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_quiz"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="20dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/gold"
-            android:drawableLeft="@android:drawable/star_off"
-            android:text="@string/btn_quiz" />
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/limeGreen"
-            android:drawableLeft="@android:drawable/ic_lock_power_off"
-            android:text="@string/btn_logout" />
+            android:orientation="horizontal"
+            android:background="@drawable/button_topic_page">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/logout"/>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/btn_logout"
+                android:textSize="6pt"
+                android:textAlignment="textStart"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+        <!--<Button-->
+            <!--android:id="@+id/btn_resource"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:backgroundTint="@color/forestGreen"-->
+            <!--android:drawableLeft="@android:drawable/ic_menu_view"-->
+            <!--android:text="@string/btn_resource" />-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_quiz"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:backgroundTint="@color/gold"-->
+            <!--android:drawableLeft="@android:drawable/star_off"-->
+            <!--android:text="@string/btn_quiz" />-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_logout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:backgroundTint="@color/limeGreen"-->
+            <!--android:drawableLeft="@android:drawable/ic_lock_power_off"-->
+            <!--android:text="@string/btn_logout" />-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -111,7 +195,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.6"
+            android:layout_weight="0.5"
+            android:background="@color/darkGrey"
             android:orientation="horizontal">
 
             <ImageButton
@@ -120,7 +205,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
-                android:layout_margin="2dp"
+                android:layout_marginTop="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_lesson_unact" />
 
@@ -130,7 +215,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
-                android:layout_margin="2dp"
+                android:layout_marginTop="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_profile_act" />
 

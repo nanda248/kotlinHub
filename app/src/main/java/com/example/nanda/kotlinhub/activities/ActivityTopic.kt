@@ -25,8 +25,6 @@ class ActivityTopic : AppCompatActivity() {
         var topicFile = intent.getStringExtra("topicFile")
         var topicNum = intent.getIntExtra("topicNum", 1)
 
-
-
         var jsonHelper = JSONHelper(topicFile, this)
         var topic: ArrayList<Section> = jsonHelper.parse()
         var section1 = topic[0]
@@ -48,7 +46,7 @@ class ActivityTopic : AppCompatActivity() {
         }
 
         val username = userDBHelper.getUsername()
-        val progress = userDBHelper.getProgress(username)
+        val progress = userDBHelper.getProgress()
 
         //Toast.makeText(this, "Topic: " + topicNum + " Progress: " + progress, Toast.LENGTH_LONG).show()
 

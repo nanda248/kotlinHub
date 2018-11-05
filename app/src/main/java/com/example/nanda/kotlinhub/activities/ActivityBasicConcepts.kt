@@ -26,8 +26,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
         setContentView(R.layout.activity_basic_concepts)
 
         userDBHelper = UserDBHelper(this)
-        val username = userDBHelper.getUsername()
-        var progress = userDBHelper.getProgress(username)
+        var progress = userDBHelper.getProgress()
 
         val btnOverview = findViewById<Button>(R.id.btn_topic1)
         val btnBasicType = findViewById<Button>(R.id.btn_topic2)
