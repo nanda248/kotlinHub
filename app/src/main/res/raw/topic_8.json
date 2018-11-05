@@ -1,0 +1,53 @@
+[
+  {
+    "id":8,
+    "topic":"Kotlin when Expression",
+    "section":1,
+    "title":"Simple when Expression",
+    "content":[
+      "The when construct in Kotlin can be thought of as a replacement for Java switch Statement. It evaluates a section of code among many alternatives.",
+      "If none of the branch conditions are satisfied (user entered anything except +, -, *, or /) , else branch is evaluated."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "  ",
+      "    val a = 12",
+      "    val b = 5",
+      "  ",
+      "    println(\"Enter operator either +, -, * or /\")",
+      "    val operator = readLine()",
+      "  ",
+      "    val result = when (operator) {",
+      "        \"+\" -> a + b",
+      "        \"-\" -> a - b",
+      "        \"*\" -> a * b",
+      "        \"/\" -> a / b",
+      "        else -> \"$operator operator is invalid operator.\"",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":8,
+    "topic":"Kotlin when Expression",
+    "section":2,
+    "title":"Few Possibilities",
+    "content":[
+      "Combine two or more branch conditions with a comma. For example,"
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    val n = -1",
+      "    ",
+      "    when (n) {",
+      "        1, 2, 3 -> println(\"n is less than 4.\")",
+      "        0 -> println(\"n is zero\")",
+      "        -1, -2 -> println(\"n is greater than 3.\")",
+      "     }",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

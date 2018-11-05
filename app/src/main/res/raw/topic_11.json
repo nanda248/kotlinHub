@@ -1,0 +1,45 @@
+[
+  {
+    "id":11,
+    "topic":"Kotlin break Expression",
+    "section":1,
+    "title":"Unlabeled break",
+    "content":[
+      "Suppose you are working with loops. It is sometimes desirable to terminate the loop immediately without checking the test expression.",
+      "In such case, break is used. It terminates the nearest enclosing loop when encountered (without checking the test expression). This is similar to how break statement works in Java."
+    ],
+    "code": [
+      "for (...) {",
+      "    if (testExpression) {",
+      "        break",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":11,
+    "topic":"Kotlin break Expression",
+    "section":2,
+    "title":"Labeled break",
+    "content":[
+      "What you have learned till now is unlabeled form of break, which terminates the nearest enclosing loop. There is another way break can be used (labeled form) to terminate the desired loop (can be outer loop).",
+      "Here, first@ is a label marked at the outer while loop. Now, by using break with a label (break@first in this case), you can break the specific loop."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "    first@ for (i in 1..4) {",
+      "    ",
+      "        second@ for (j in 1..2) {",
+      "    ",
+      "            if (i == 2)",
+      "                break@first",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

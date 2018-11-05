@@ -5,16 +5,15 @@
 
     <item>
         <shape android:shape="rectangle">
-            <stroke android:color="@color/grey" android:width="5dp" />
-            <solid android:color="@color/grey"/>
+            <solid android:color="@color/white"/>
             <size android:width="150dp" android:height="150dp"/>
         </shape>
     </item>
 
     <item
-        android:drawable="@drawable/user_icon"
-        android:width="25dp"
-        android:height="25dp"
+        android:drawable="@drawable/learn_act"
+        android:width="35dp"
+        android:height="35dp"
         android:gravity="center"/>
 
 </layer-list>

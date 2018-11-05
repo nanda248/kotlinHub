@@ -1,0 +1,35 @@
+[
+  {
+    "Qn": "What is the output in the following code?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "    val a = 10",
+      "    ",
+      "    when (a) {",
+      "        in 1..10 -> ",
+      "            println(\"Positive num less than 11.\")",
+      "        in 10..100 -> ",
+      "            println(\"Positive num between 10 and 100\")",
+      "     }",
+      "}"
+    ],
+    "A": "Positive num less than 11.",
+    "B": "Positive num between 10 and 100.",
+    "C": "Nothing will be printed out",
+    "D": "This piece of code will cause an error",
+    "Ans": "A"
+  },
+
+  {
+    "Qn": "Is the [else] branch mandatory if [when] is used as an expression?",
+    "Code": [
+      "N"
+    ],
+    "A": "No",
+    "B": "Yes",
+    "C": "It depends on the code",
+    "D": "[when] cannot be used as an expression",
+    "Ans": "B"
+  }
+]

@@ -122,7 +122,7 @@
                 android:layout_centerInParent="true"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/rectangle_button_lesson" />
+                android:background="@drawable/button_lesson_unact" />
 
             <ImageButton
                 android:id="@+id/btn_profile_page"
@@ -132,7 +132,7 @@
                 android:layout_centerInParent="true"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/rectangle_button_profile" />
+                android:background="@drawable/button_profile_act" />
 
         </LinearLayout>
 

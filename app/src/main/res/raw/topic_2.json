@@ -3,6 +3,27 @@
     "id":2,
     "topic":"Basic Data Types",
     "section":1,
+    "title":"Variable Declaration",
+    "content":[
+      "To declare a variable in Kotlin, either var or val keyword is used.",
+      "val (Immutable reference) - The variable declared using val keyword cannot be changed once the value is assigned. It is similar to final variable in Java.",
+      "var (Mutable reference) - The variable declared using var keyword can be changed later in the program. It corresponds to regular Java variable.",
+      "Here are few examples:"
+    ],
+    "code": [
+      "var language = \"French\"",
+      "language = \"German\"",
+      "   ",
+      "val language = \"French\"",
+      "language = \"German\"      // Error"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":2,
+    "topic":"Basic Data Types",
+    "section":2,
     "title":"Numbers",
     "content":[
       "The representation of numbers in Kotlin is pretty similar to Java, however, Kotlin does not allow internal conversion of different data types."
@@ -23,7 +44,7 @@
   {
     "id":2,
     "topic":"Basic Data Types",
-    "section":2,
+    "section":3,
     "title":"Characters",
     "content":[
       "Kotlin represents character using char. Character should be declared in a single quote like ‘c’. Please enter the following code in our coding ground and see how Kotlin interprets the character variable. Character variable cannot be declared like number variables. Kotlin variable can be declared in two ways - one using “var” and another using “val”."
@@ -41,7 +62,7 @@
   {
     "id":2,
     "topic":"Basic Data Types",
-    "section":3,
+    "section":4,
     "title":"Boolean",
     "content":[
       "Boolean is very simple like other programming languages. We have only two values for Boolean – either true or false. In the following example, we will see how Kotlin interprets Boolean."
@@ -59,7 +80,7 @@
   {
     "id":2,
     "topic":"Basic Data Types",
-    "section":4,
+    "section":5,
     "title":"Strings",
     "content":[
       "Strings are character arrays. Like Java, they are immutable in nature. We have two kinds of string available in Kotlin - one is called raw String and another is called escaped String. In the following example, we will make use of these strings. Escaped String allows to provide extra line space after the print statement."
@@ -67,9 +88,27 @@
     "code": [
       "fun main(args: Array<String>) {",
       "   var rawString :String  = \"I am Raw String!\"",
-      "   val escapedString : String  = \"I am escaped String!\"",
+      "   val escapedString : String  = \"I am escaped String! \n \"",
       "   println(\"Hello!\"+escapedString)",
       "   println(\"Hey!!\"+rawString)",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":2,
+    "topic":"Basic Data Types",
+    "section":6,
+    "title":"Arrays",
+    "content":[
+      "An array is a container that holds data (values) of one single type.",
+      "In Kotlin, arrays are represented by the Array class. The class has get and set functions, size property, and a few other useful member functions."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "   val numbers: IntArray = intArrayOf(1, 2, 3, 4, 5)",
+      "   println(\"Hey!! I am array Example\"+numbers[2])",
       "}"
     ],
     "highlight": "N"

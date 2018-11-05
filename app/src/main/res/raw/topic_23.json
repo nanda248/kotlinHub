@@ -1,0 +1,25 @@
+[
+  {
+    "id":23,
+    "topic":"Kotlin Companion Objects",
+    "section":1,
+    "title":"Companion Object",
+    "content":[
+      "A companion object is created by marking object declaration with companion keyword.",
+      "If you are familiar with Java, you may relate companion objects with static methods (even though how they work internally is totally different)."
+    ],
+    "code": [
+      "class Person {",
+      "   ",
+      "    companion object {",
+      "        fun callMe() = println(\"I'm called.\")",
+      "    }",
+      "}",
+      "   ",
+      "fun main(args: Array<String>) {",
+      "    Person.callMe()",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

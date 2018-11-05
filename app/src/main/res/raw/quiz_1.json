@@ -1,0 +1,21 @@
+[
+  {
+    "Qn": "Why is Kotlin interoperable with Java?",
+    "Code": ["N"],
+    "A": "Because it compiles to JVM bytecode.",
+    "B": "Because Kotlin is exactly the same as Java",
+    "C": "Because it is translated into Java code",
+    "D": "Because it is not a language but just a simple Java library",
+    "Ans": "A"
+  },
+
+  {
+    "Qn": "Which of these targets does Kotlin currently not support?",
+    "Code": ["N"],
+    "A": "LLVM",
+    "B": "JavaScript",
+    "C": ".NET CLR",
+    "D": "JVM",
+    "Ans": "C"
+  }
+]

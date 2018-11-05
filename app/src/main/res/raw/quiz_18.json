@@ -1,0 +1,36 @@
+[
+  {
+    "Qn": "What is keyword \"super\" used for in derived class?",
+    "Code": [
+      "N"
+    ],
+    "A": "To call functions and access properties in base class",
+    "B": "To override the functions in base class",
+    "C": "To indicate a constructor",
+    "D": "To change the value of properties in base class",
+    "Ans": "A"
+  },
+
+  {
+    "Qn": "What is the problem of the following code?",
+    "Code": [
+      "class Person() {",
+      "    fun displayAge(age: Int) {",
+      "        println(\"My age is $age.\")",
+      "    }",
+      "}",
+      "    ",
+      "class Girl: Person() {",
+      "    override fun displayAge(age: Int) {",
+      "        super.displayAge(age)",
+      "        println(\"My fake age is ${age - 5}.\")",
+      "    }",
+      "}"
+    ],
+    "A": "There is no problem with this code.",
+    "B": "The \"override\" keyword is missing in base class.",
+    "C": "The \"open\" keyword is only missing before the base class.",
+    "D": "The \"open\" keyword is missing before the base class as well as the member function.",
+    "Ans": "D"
+  }
+]

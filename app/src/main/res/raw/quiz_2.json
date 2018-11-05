@@ -1,0 +1,31 @@
+[
+  {
+    "Qn": "How do you declare and initiate an integer variable in Kotlin?",
+    "Code": ["N"],
+    "A": "val number: Int = 10",
+    "B": "var number: int = 10",
+    "C": "val number: integer = 10",
+    "D": "int number = 10",
+    "Ans": "A"
+  },
+
+  {
+    "Qn": "What is the difference between val and var in Kotlin?",
+    "Code": ["N"],
+    "A": "Variables declared with var are final, those with val are not",
+    "B": "Variables declared with val are final, those with var are not",
+    "C": "var is scoped to the nearest function block and val is scoped to the nearest enclosing block",
+    "D": "Variables declared with val can only access const members",
+    "Ans": "B"
+  },
+
+  {
+    "Qn": "How do you convert a String to an Int?",
+    "Code": ["N"],
+    "A": "var x: Int = \"9\".toInt()",
+    "B": "var x: Int = (Int) \"9\"",
+    "C": "let x = \"9\".toInt()",
+    "D": "int x = valueOf(\"9\")",
+    "Ans": "A"
+  }
+]

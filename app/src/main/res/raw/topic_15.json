@@ -1,0 +1,55 @@
+[
+  {
+    "id":15,
+    "topic":"Kotlin Recursion",
+    "section":1,
+    "title":"Recursive Function",
+    "content":[
+      "A function that calls itself is known as recursive function. And, this technique is known as recursion.",
+      "A physical world example would be to place two parallel mirrors facing each other. Any object in between them would be reflected recursively.",
+      "Here, the recurse() function is called from the body of recurse() function itself."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    ... .. ...",
+      "    recurse()",
+      "    ... .. ...",
+      "}",
+      "    ",
+      "fun recurse() {",
+      "    ... .. ...",
+      "    recurse()",
+      "    ... .. ...",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":15,
+    "topic":"Kotlin Recursion",
+    "section":2,
+    "title":"Typical Example - Factorial",
+    "content":[
+      "This example is to compute factorial of a number using recursion.",
+      "To avoid infinite recursion, if...else (or similar approach) can be used where one branch makes the recursive call and other doesn't."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    val number = 4",
+      "    val result: Long",
+      "    ",
+      "    result = factorial(number)",
+      "    println(\"Factorial of $number = $result\")",
+      "}",
+      "    ",
+      "fun factorial(n: Int): Long {",
+      "    if (n == 1)",
+      "       return n.toLong()",
+      "    else",
+      "       return n*factorial(n-1)",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]
