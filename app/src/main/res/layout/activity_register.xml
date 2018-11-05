@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/kotlin_hub_text_logo" />
+            app:srcCompat="@drawable/app_logo_green" />
 
     </LinearLayout>
 
@@ -87,18 +87,18 @@
             tools:layout_editor_absoluteX="147dp"
             tools:layout_editor_absoluteY="177dp" />
 
-        <Button
-            android:id="@+id/btn_get_users"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/btnColorPrimary"
-            android:text="GET ALL USERS" />
+        <!--<Button-->
+            <!--android:id="@+id/btn_get_users"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/btnColorPrimary"-->
+            <!--android:text="GET ALL USERS" />-->
 
-        <TextView
-            android:id="@+id/tv_display_users"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+        <!--<TextView-->
+            <!--android:id="@+id/tv_display_users"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="TextView" />-->
 
 
     </LinearLayout>

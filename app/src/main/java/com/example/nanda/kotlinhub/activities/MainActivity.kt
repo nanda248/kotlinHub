@@ -44,11 +44,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val goToManageUserPage = findViewById<TextView>(R.id.manageUserAccounts)
-        goToManageUserPage.setOnClickListener {
-            val myIntent = Intent(this, manage_user::class.java)
-            startActivity(myIntent)
-        }
+//        val goToManageUserPage = findViewById<TextView>(R.id.manageUserAccounts)
+//        goToManageUserPage.setOnClickListener {
+//            val myIntent = Intent(this, manage_user::class.java)
+//            startActivity(myIntent)
+//        }
 
 
     }
