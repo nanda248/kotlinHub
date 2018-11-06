@@ -139,6 +139,10 @@ class ActivityHomePage : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        // Do Here what ever you want do on back press;
+    }
+
     fun showPopupModal() {
         val inflater:LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.popup_layout_locked, null)

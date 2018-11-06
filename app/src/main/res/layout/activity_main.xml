@@ -66,14 +66,10 @@
                     android:layout_height="50dp"
                     android:layout_marginBottom="40dp"
                     android:background="@color/gold"
-                    android:enabled="false"
-                    android:fadeScrollbars="false"
                     android:text="@string/btn_log_in"
                     android:textColor="@color/black"
                     tools:layout_editor_absoluteX="147dp"
                     tools:layout_editor_absoluteY="177dp" />
-
-
 
                 <TextView
                     android:id="@+id/registerNewAccount"

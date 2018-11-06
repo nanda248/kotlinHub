@@ -30,13 +30,11 @@ class register : AppCompatActivity() {
         }
 
         val textView = findViewById<TextView>(R.id.tv_display_users)
-        val imageView_logo = findViewById<ImageView>(R.id.imageView_logo)
-        imageView_logo.setOnClickListener {
+        val imageViewLogo = findViewById<ImageView>(R.id.imageView_logo)
+        imageViewLogo.setOnClickListener {
 
             if(count == 2) {
                 val allUsers = userDBHelper.getAllUsers()
-
-
                 var str: String? = null
                 str = "Fetched " + allUsers.size + " users:  \n"
                 textView.setText("All Users: " + str)
