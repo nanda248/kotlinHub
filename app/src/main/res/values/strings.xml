@@ -81,6 +81,7 @@
     <string name="tv_function">Functions</string>
     <string name="tv_miscell">OOP</string>
     <string name="tv_congrats">Congratulations!</string>
+    <string name="tv_poweredby">Powered By</string>
 
     <!-- Fragment -->
     <string name="user_fragment">Hello blank user profile fragment. here here here</string>
