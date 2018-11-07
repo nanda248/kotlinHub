@@ -19,7 +19,8 @@
     <color name="darkGrey">#A9A9A9</color>
     <color name="green">#2ac17d</color>
     <color name="dark_green">#25a96d</color>
-    <color name="transparent_green">#582ac17d</color>
+    <color name="transparent_green">#5538e195</color>
     <color name="lightGrey">#caeaeaea</color>
     <color name="royalBlue">#4169E1</color>
+    <color name="pureWhite">#FFFFFF</color>
 </resources>

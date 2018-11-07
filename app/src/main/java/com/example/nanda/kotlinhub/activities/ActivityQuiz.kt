@@ -150,6 +150,9 @@ class ActivityQuiz : AppCompatActivity() {
         val optB = qnAns.getOptB()
         val optC = qnAns.getOptC()
         val optD = qnAns.getOptD()
+        val tvCode = findViewById<TextView>(R.id.tv_code)
+        tvCode.text = ""
+        tvCode.setBackgroundResource(0)
 
         val tv_qn = findViewById<TextView>(R.id.tv_question)
         tv_qn.text = qn
@@ -161,7 +164,7 @@ class ActivityQuiz : AppCompatActivity() {
                 codeString = codeString + code[j] + "\n"
             }
             codeString = codeString + "   " + code[code.size-1]
-            val tvCode = findViewById<TextView>(R.id.tv_code)
+
             tvCode.text = codeString
             tvCode.setBackgroundResource(R.drawable.code_border)
         }
