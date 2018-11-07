@@ -22,6 +22,7 @@ class ActivityHomePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
+
         val btnBasicConcept = findViewById<ImageButton>(R.id.btn_basic_concept)
         val btnFC = findViewById<ImageButton>(R.id.btn_class_object)
         val btnFunction = findViewById<ImageButton>(R.id.btn_function)
@@ -128,8 +129,6 @@ class ActivityHomePage : AppCompatActivity() {
                 showPopupModal()
             }
         }
-
-
 
         test.setOnClickListener {
             val myIntent = Intent(this, ActivityQuiz::class.java)

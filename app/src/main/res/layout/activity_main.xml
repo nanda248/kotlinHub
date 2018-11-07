@@ -25,7 +25,6 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -80,7 +79,6 @@
                 android:clickable="true"
                 android:text="@string/txt_register"
                 android:textColor="@color/royalBlue" />
-
 
         </LinearLayout>
 
