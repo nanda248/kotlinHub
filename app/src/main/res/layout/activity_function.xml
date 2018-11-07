@@ -59,7 +59,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/overview"/>
+                    android:src="@drawable/basic_type"/>
 
                 <Button
                     android:id="@+id/btn_topic13"
@@ -115,7 +115,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/flow_control"/>
+                    android:src="@drawable/basic_type"/>
 
                 <Button
                     android:id="@+id/btn_topic15"
