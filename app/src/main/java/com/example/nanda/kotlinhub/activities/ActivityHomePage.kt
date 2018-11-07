@@ -26,7 +26,6 @@ class ActivityHomePage : AppCompatActivity() {
         val btnFC = findViewById<ImageButton>(R.id.btn_class_object)
         val btnFunction = findViewById<ImageButton>(R.id.btn_function)
         val btnOOP = findViewById<ImageButton>(R.id.btn_miscellaneous)
-        val test = findViewById<Button>(R.id.test)
         val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
         val btnProfilePage = findViewById<ImageButton>(R.id.btn_profile_page)
 
@@ -38,7 +37,6 @@ class ActivityHomePage : AppCompatActivity() {
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
-        test.text = progress.toString()
 
         if(progress in 1..5){
 
@@ -130,12 +128,6 @@ class ActivityHomePage : AppCompatActivity() {
         }
 
 
-
-        test.setOnClickListener {
-            val myIntent = Intent(this, ActivityQuiz::class.java)
-            myIntent.putExtra("quizFile", "quiz_3")
-            startActivity(myIntent)
-        }
 
     }
 
