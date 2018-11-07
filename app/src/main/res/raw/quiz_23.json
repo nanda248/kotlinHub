@@ -1,0 +1,13 @@
+[
+  {
+    "Qn": "What is companion object used for?",
+    "Code": [
+      "N"
+    ],
+    "A": "To create an instance of a class",
+    "B": "To connect two different classes",
+    "C": "To enable calling methods by using class name",
+    "D": "To initialize properties and methods",
+    "Ans": "C"
+  }
+]

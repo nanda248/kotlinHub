@@ -1,0 +1,89 @@
+[
+  {
+    "id":21,
+    "topic":"Kotlin Data Class",
+    "section":1,
+    "title":"Overview",
+    "content":[
+      "There may arise a situation where you need to create a class solely to hold data. In such cases, you can mark the class as data to create a data class.",
+      "For this class, the compiler automatically generates: copy() function, equals() and hashCode() pair, toString() form of the primary constructor and componentN() functions."
+    ],
+    "code": [
+      "data class Person(val name: String, var age: Int)"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":21,
+    "topic":"Kotlin Data Class",
+    "section":2,
+    "title":"Data Class Requirements",
+    "content":[
+      "1. The primary constructor must have at least one parameter.",
+      "2. The parameters of the primary constructor must be marked as either val (read-only) or var (read-write).",
+      "3. The class cannot be open, abstract, inner or sealed.",
+      "4. The class may extend other classes or implement interfaces. If you are using Kotlin version before 1.1, the class can only implement interfaces."
+    ],
+    "code": [
+      "data class User(val name: String, val age: Int)",
+      "    ",
+      "fun main(args: Array<String>) {",
+      "    val jack = User(\"jack\", 29)",
+      "    println(\"name = ${jack.name}\")",
+      "    println(\"age = ${jack.age}\")",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":21,
+    "topic":"Kotlin Data Class",
+    "section":3,
+    "title":"Copying",
+    "content":[
+      "For a data class, you can create a copy of an object with some of its properties different using copy() function. Here's how it works:"
+    ],
+    "code": [
+      "data class User(val name: String, val age: Int)",
+      "   ",
+      "fun main(args: Array<String>) {",
+      "    val u1 = User(\"John\", 29)",
+      "   ",
+      "    // using copy function to create an object",
+      "    val u2 = u1.copy(name = \"Randy\")",
+      "   ",
+      "    println(\"u1: name = ${u1.name}, name = ${u1.age}\")",
+      "    println(\"u2: name = ${u2.name}, name = ${u2.age}\")",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":21,
+    "topic":"Kotlin Data Class",
+    "section":4,
+    "title":"hashCode()",
+    "content":[
+      "The hasCode() method returns hash code for the object. If two objects are equal, hashCode() produces the same integer result. "
+    ],
+    "code": [
+      "data class User(val name: String, val age: Int)",
+      "   ",
+      "fun main(args: Array<String>) {",
+      "    val u1 = User(\"John\", 29)",
+      "    val u2 = u1.copy()",
+      "    val u3 = u1.copy(name = \"Amanda\")",
+      "   ",
+      "    //u1 will have same hashcode as u2",
+      "    //u3 will have a different hashcode",
+      "    println(\"u1 hashcode = ${u1.hashCode()}\")",
+      "    println(\"u2 hashcode = ${u2.hashCode()}\")",
+      "    println(\"u3 hashcode = ${u3.hashCode()}\")",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

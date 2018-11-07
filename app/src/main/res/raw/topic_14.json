@@ -1,0 +1,27 @@
+[
+  {
+    "id":14,
+    "topic":"Kotlin Infix Function Call",
+    "section":1,
+    "title":"Infix Function",
+    "content":[
+      "In this section, let's explore two commonly used infix functions: || and &&.",
+      "When you use || and && operations, the compiler look up for \"or\" and \"and\" functions respectively, and calls them under the hood.",
+      "These two functions support infix notation."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    val a = true",
+      "    val b = false",
+      "    var result: Boolean",
+      "   ",
+      "    result = a or b  // a.or(b)",
+      "    println(\"result = $result\")",
+      "   ",
+      "    result = a and b  // a.and(b)",
+      "    println(\"result = $result\")",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

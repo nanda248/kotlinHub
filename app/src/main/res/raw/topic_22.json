@@ -1,0 +1,50 @@
+[
+  {
+    "id":22,
+    "topic":"Kotlin Sealed Class",
+    "section":1,
+    "title":"Existing Problem",
+    "content":[
+      "Before going into details about sealed classes, let's explore what problem they solve.",
+      "In the program below, the base class Expr has two derived classes Const and Sum. Here, it's mandatory to use else branch for default condition in when expression.",
+      "Now, if you derive a new subclass from Expr class, the compiler won't detect anything as else branch handles it which can lead to bugs. "
+    ],
+    "code": [
+      "class Expr",
+      "class Const(val value: Int) : Expr",
+      "class Sum(val left: Expr, val right: Expr) : Expr",
+      "   ",
+      "fun eval(e: Expr): Int =",
+      "     when (e) {",
+      "        is Const -> e.value",
+      "        is Sum -> eval(e.right) + eval(e.left)",
+      "        else ->",
+      "            throw Exception(\"Unknown expression\")",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":22,
+    "topic":"Kotlin Sealed Class",
+    "section":2,
+    "title":"Sealed Class Solution",
+    "content":[
+      "To solve this problem, you can use sealed class. As mentioned, sealed class restricts the possibility of creating subclasses. And, when you handle all subclasses of a sealed class in an when expression, it's not necessary to use else branch.",
+      "As you can see, there is no else branch. If you derive a new subclass from Expr class, the compiler will complain unless the subclass is handled in the when expression."
+    ],
+    "code": [
+      "Sealed class Expr",
+      "class Const(val value: Int) : Expr",
+      "class Sum(val left: Expr, val right: Expr) : Expr",
+      "   ",
+      "fun eval(e: Expr): Int =",
+      "     when (e) {",
+      "        is Const -> e.value",
+      "        is Sum -> eval(e.right) + eval(e.left)",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

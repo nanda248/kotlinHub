@@ -1,0 +1,45 @@
+[
+  {
+    "id":13,
+    "topic":"Kotlin Functions",
+    "section":1,
+    "title":"Function Overview",
+    "content":[
+      "In programming, function is a group of related statements that perform a specific task.",
+      "Functions are used to break a large program into smaller and modular chunks, which makes our program more organized and manageable.",
+      "Furthermore, it avoids repetition and makes code reusable."
+    ],
+    "code": [
+      "fun callMe() {",
+      "    println(\"This is callMe() function.\")",
+      "}",
+      "   ",
+      "fun main(args: Array<String>) {",
+      "    callMe()",
+      "    println(\"Printing outside callMe().\")",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":13,
+    "topic":"Kotlin Functions",
+    "section":1,
+    "title":"Arguments and Return Value",
+    "content":[
+      "In Kotlin, arguments are separated using commas. Also, the type of the formal argument must be explicitly typed.",
+      "Note that, the data type of actual and formal arguments should match, i.e., the data type of first actual argument should match the type of first formal argument. Similarly, the type of second actual argument must match the type of second formal argument and so on."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    println(getName(\"John\", \"Doe\"))",
+      "}",
+      "   ",
+      "fun getName(firstName: String, lastName: String): String{",
+      "    return firstName + lastName",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

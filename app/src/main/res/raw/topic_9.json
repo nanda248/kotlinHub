@@ -1,0 +1,37 @@
+[
+  {
+    "id":9,
+    "topic":"Kotlin while Loop",
+    "section":1,
+    "title":"while Loop",
+    "content":[
+      "Loop is used in programming to repeat a specific block of code until certain condition is met.",
+      "In the syntax below, he test expression inside the parenthesis is a Boolean expression.",
+      "If the test expression is evaluated to true,",
+      " - statements inside the while loop are executed. \n  - then, the test expression is evaluated again.",
+      "This process goes on until the test expression is evaluated to false."
+    ],
+    "code": [
+      "while (testExpression) {",
+      "    // codes inside body of while loop",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":9,
+    "topic":"Kotlin while Loop",
+    "section":2,
+    "title":"do...while Loop",
+    "content":[
+      "The do...while loop is similar to while loop with one key difference. The body of do...while loop is executed once before the test expression is checked."
+    ],
+    "code": [
+      "do {",
+      "   // codes inside body of do while loop",
+      "} while (testExpression);"
+    ],
+    "highlight": "N"
+  }
+]

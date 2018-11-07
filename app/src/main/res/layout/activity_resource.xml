@@ -51,7 +51,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial\nIntroduction" />
+                        android:text="#1 Kotlin Tutorial\nIntroduction" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -90,7 +90,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="10dp"
                         android:layout_weight="4"
-                        android:text="Kotlin Tutorial \nHello World"
+                        android:text="#2 Kotlin Tutorial \nHello World"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -133,7 +133,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nIntelliJ | Android" />
+                        android:text="#3 Kotlin Tutorial \nIntelliJ | Android" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -174,7 +174,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nClass | Object" />
+                        android:text="#4 Kotlin Tutorial \nClass | Object" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -215,7 +215,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nVar Val" />
+                        android:text="#5 Kotlin Tutorial \nVar Val" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -256,7 +256,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nKotlin Java Together" />
+                        android:text="#6 Kotlin Tutorial \nKotlin Java Together" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -297,7 +297,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nConvert Java Kotlin" />
+                        android:text="#7 Kotlin Tutorial \nConvert Java Kotlin" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -338,7 +338,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nDecompile Bytecode" />
+                        android:text="#8 Kotlin Tutorial \nDecompile Bytecode" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -379,7 +379,7 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nOperators" />
+                        android:text="#9 Kotlin Tutorial \nOperators" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -420,12 +420,11 @@
                         android:layout_weight="4"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:text="Kotlin Tutorial \nString Template" />
+                        android:text="#10 Kotlin Tutorial \nString Template" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
-
+            
         </LinearLayout>
     </ScrollView>
 

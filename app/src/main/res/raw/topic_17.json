@@ -1,0 +1,51 @@
+[
+  {
+    "id":17,
+    "topic":"Kotlin Constructors",
+    "section":1,
+    "title":"Primary Constructor",
+    "content":[
+      "A constructor is a concise way to initialize class properties. In Kotlin, there are two constructors: primary constructor and secondary constructor.",
+      "The primary constructor is part of the class header. In the example below, The block of code surrounded by parentheses is the primary constructor: (val firstName: String, var age: Int).",
+      "The constructor declared two properties: firstName (read-only property as it's declared using keyword val) and age (read-write property as it is declared with keyword var)."
+    ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "    val person1 = Person(\"Joe\", 25)",
+      "    ",
+      "    println(\"First Name = ${person1.firstName}\")",
+      "    println(\"Age = ${person1.age}\")",
+      "}",
+      "    ",
+      "class Person(val firstName: String, var age: Int) {",
+      "    ",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":17,
+    "topic":"Kotlin Constructors",
+    "section":2,
+    "title":"Secondary Constructor",
+    "content":[
+      "In Kotlin, a class can also contain one or more secondary constructors. They are created using constructor keyword.",
+      "Secondary constructors are not that common in Kotlin. The most common use of secondary constructor comes up when you need to extend a class that provides multiple constructors that initialize the class in different ways.",
+      "Here, the Log class has two secondary constructors, but no primary constructor."
+    ],
+    "code": [
+      "class Log {",
+      "    constructor(data: String) {",
+      "        // some code",
+      "    }",
+      "    ",
+      "    constructor(data: String, numberOfData: Int) {",
+      "        // some code",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

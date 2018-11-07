@@ -1,0 +1,25 @@
+[
+  {
+    "Qn": "Which of the following statements about interface and abstract class is true?",
+    "Code": [
+      "N"
+    ],
+    "A": "They are the same, just different names.",
+    "B": "It's mandatory for properties of both abstract class and interface to be abstract or provide accessor implementations.",
+    "C": "Interfaces cannot store state whereas abstract classes can.",
+    "D": "Interfaces can store state whereas abstract classes cannot.",
+    "Ans": "C"
+  },
+
+  {
+    "Qn": "Which of the following statements about interface is true?",
+    "Code": [
+      "N"
+    ],
+    "A": "An interface cannot have any property.",
+    "B": "An interface may have property but it needs to be abstract or has to provide accessor implementations.",
+    "C": "A class implements the interface must override every single function of the interface.",
+    "D": "An interface can store states.",
+    "Ans": "B"
+  }
+]

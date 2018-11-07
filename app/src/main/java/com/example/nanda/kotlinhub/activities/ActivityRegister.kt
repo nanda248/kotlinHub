@@ -3,6 +3,8 @@ package com.example.nanda.kotlinhub.activities
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import com.example.nanda.kotlinhub.R
 import com.example.nanda.kotlinhub.helper.UserDBHelper
@@ -12,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_register.*
 class register : AppCompatActivity() {
 
     lateinit var userDBHelper: UserDBHelper
+    var count: Int = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +26,33 @@ class register : AppCompatActivity() {
             val result = registerUser()
             if(result == true) {
                 finish()
+            }
+        }
+
+        val textView = findViewById<TextView>(R.id.tv_display_users)
+        val imageViewLogo = findViewById<ImageView>(R.id.imageView_logo)
+        imageViewLogo.setOnClickListener {
+
+            if(count == 2) {
+                val allUsers = userDBHelper.getAllUsers()
+                var str: String? = null
+                str = "Fetched " + allUsers.size + " users:  \n"
+                textView.setText("All Users: " + str)
+
+                var usersList: String? = null
+                allUsers.forEach{
+                    usersList = it.email.toString() + " - " + it.username.toString() +" - " + it.progress.toString() + "\n"
+                    textView.append(usersList)
+                    usersList = ""
+                }
+            } else if(count == 5) {
+                textView.setText("")
+            }
+
+            if(count < 6) {
+                count++
+            } else {
+                count = 0
             }
         }
 

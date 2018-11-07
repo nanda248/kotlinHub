@@ -8,16 +8,55 @@
     <string name="btn_lessons">Lessons</string>
     <string name="btn_logout">Logout</string>
     <string name="btn_next">Continue</string>
-    <string name="btn_topic1">Kotlin Overview</string>
-    <string name="btn_topic2">Basic Data Types</string>
-    <string name="btn_topic3">Control Flow</string>
-    <string name="btn_topic4">Visibility Control</string>
     <string name="btn_close">Close</string>
     <string name="btn_yes">Yes</string>
     <string name="btn_later">Later</string>
     <string name="btn_yay">Yay!</string>
     <string name="btn_quiz">Quiz</string>
     <string name="btn_resource">Resource</string>
+    <string name="btn_ok">Ok, got it!</string>
+    <string name="btn_topic1">Kotlin Overview</string>
+    <string name="btn_topic2">Basic Data Types</string>
+    <string name="btn_topic3">Operators</string>
+    <string name="btn_topic4">Type Conversion</string>
+    <string name="btn_topic5">Expressions &amp; Statements</string>
+    <string name="btn_topic6">Kotlin Comments</string>
+    <string name="btn_topic7">Kotlin if Expression</string>
+    <string name="btn_topic8">Kotlin when Expression</string>
+    <string name="btn_topic9">Kotlin while Loop</string>
+    <string name="btn_topic10">Kotlin for Loop</string>
+    <string name="btn_topic11">Kotlin break</string>
+    <string name="btn_topic12">Kotlin continue</string>
+    <string name="btn_topic13">Kotlin function</string>
+    <string name="btn_topic14">Infix Function Call</string>
+    <string name="btn_topic15">Recursion</string>
+    <string name="btn_topic16">Kotlin Class and Objects</string>
+    <string name="btn_topic17">Kotlin Constructors</string>
+    <string name="btn_topic18">Kotlin Inheritance</string>
+    <string name="btn_topic19">Kotlin Abstract Class</string>
+    <string name="btn_topic20">Kotlin Interfaces</string>
+    <string name="btn_topic21">Kotlin Data Class</string>
+    <string name="btn_topic22">Kotlin Sealed Class</string>
+    <string name="btn_topic23">Companion Object</string>
+    <string name="btn_quiz1">Quiz: Kotlin Overview</string>
+    <string name="btn_quiz2">Quiz: Basic Data Types</string>
+    <string name="btn_quiz3">Quiz: Operators</string>
+    <string name="btn_quiz5">Quiz: Expressions &amp; Statements</string>
+    <string name="btn_quiz7">Quiz: Kotlin if Expression</string>
+    <string name="btn_quiz8">Quiz: Kotlin when Expression</string>
+    <string name="btn_quiz9">Quiz: Kotlin while Loop</string>
+    <string name="btn_quiz10">Quiz: Kotlin for Loop</string>
+    <string name="btn_quiz11">Quiz: Kotlin break</string>
+    <string name="btn_quiz13">Quiz: Kotlin function</string>
+    <string name="btn_quiz14">Quiz: Infix Function Call</string>
+    <string name="btn_quiz15">Quiz: Recursion</string>
+    <string name="btn_quiz16">Quiz: Kotlin Class and Objects</string>
+    <string name="btn_quiz17">Quiz: Kotlin Constructors</string>
+    <string name="btn_quiz18">Quiz: Kotlin Inheritance</string>
+    <string name="btn_quiz19">Quiz: Kotlin Abstract Class</string>
+    <string name="btn_quiz20">Quiz: Kotlin Interfaces</string>
+    <string name="btn_quiz21">Quiz: Kotlin Data Class</string>
+    <string name="btn_quiz23">Quiz: Companion Object</string>
 
     <!--input text field names-->
     <string name="tf_username">User Name</string>
@@ -37,15 +76,16 @@
     <string name="action_logout">Logout</string>
     <string name="title_activity_user_profile">Kotlin Hub</string>
     <string name="txt_manage_user_accounts">Manage User Accounts</string>
+    <string name="tv_basic">Basic Concepts</string>
+    <string name="tv_class">Flow Control</string>
+    <string name="tv_function">Functions</string>
+    <string name="tv_miscell">OOP</string>
+    <string name="tv_congrats">Congratulations!</string>
+    <string name="tv_poweredby">Powered By</string>
 
     <!-- Fragment -->
     <string name="user_fragment">Hello blank user profile fragment. here here here</string>
     <string name="lesson_fragment">Hello Lesson fragment. I am here.</string>
-    <string name="tv_basic">Basic Concepts</string>
-    <string name="tv_class">Class &amp; Object</string>
-    <string name="tv_function">Function</string>
-    <string name="tv_miscell">Miscellaneous Topics</string>
-    <string name="tv_congrats">Congratulations!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

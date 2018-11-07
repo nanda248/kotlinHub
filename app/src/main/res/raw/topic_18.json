@@ -1,0 +1,82 @@
+[
+  {
+    "id":18,
+    "topic":"Kotlin Inheritance",
+    "section":1,
+    "title":"Inheritance Overview",
+    "content":[
+      "Inheritance is one of the key features of object-oriented programming. It allows user to create a new class (derived class) from an existing class (base class).",
+      "The derived class inherits all the features from the base class and can have additional features of its own.",
+      "For example,"
+    ],
+    "code": [
+      "open class Person(age: Int) {",
+      "    // code for eating, talking, walking",
+      "}",
+      "    ",
+      "class MathTeacher(age: Int): Person(age) {",
+      "    // other features of math teacher",
+      "}",
+      "    ",
+      "class Footballer(age: Int): Person(age) {",
+      "    // other features of footballer",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":18,
+    "topic":"Kotlin Inheritance",
+    "section":2,
+    "title":"Overriding Member Function",
+    "content":[
+      "If the base class and the derived class contains a member function (or property) with the same name, you can need to override the member function of the derived class using override keyword, and use open keyword for the member function of the base class."
+    ],
+    "code": [
+      "open class Person() {",
+      "    open fun displayAge(age: Int) {",
+      "        println(\"My age is $age.\")",
+      "    }",
+      "}",
+      "    ",
+      "class Girl: Person() {",
+      "    override fun displayAge(age: Int) {",
+      "        println(\"My fake age is ${age - 5}.\")",
+      "    }",
+      "}",
+      "    ",
+      "fun main(args: Array<String>) {",
+      "    val girl = Girl()",
+      "    girl.displayAge(31)",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":18,
+    "topic":"Kotlin Inheritance",
+    "section":3,
+    "title":"Calling Members of Base Class",
+    "content":[
+      "You can call functions (and access properties) of the base class from a derived class using super keyword. Here's how:"
+    ],
+    "code": [
+      "open class Person() {",
+      "    open fun displayAge(age: Int) {",
+      "        println(\"My age is $age.\")",
+      "    }",
+      "}",
+      "    ",
+      "class Girl: Person() {",
+      "    override fun displayAge(age: Int) {",
+      "        // calling function of base class",
+      "        super.displayAge(age)",
+      "        println(\"My fake age is ${age - 5}.\")",
+      "    }",
+      "}"
+    ],
+    "highlight": "N"
+  }
+]

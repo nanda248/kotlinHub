@@ -1,0 +1,43 @@
+[
+  {
+    "Qn": "What is the output in the following code?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "    var sum = 0",
+      "    var i = 100",
+      "    ",
+      "    while (i != 0) {",
+      "        sum += i",
+      "        --i",
+      "    }",
+      "    println(\"sum = $sum\")",
+      "}"
+    ],
+    "A": "sum = 0",
+    "B": "sum = 100",
+    "C": "sum = 5050",
+    "D": "sum = 5049",
+    "Ans": "C"
+  },
+
+  {
+    "Qn": "How many lines of output will be generated from the following code?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "    var threshold: Int = 9",
+      "    ",
+      "    do {",
+      "        println(\"threshold = $threshold\")",
+      "        threshold--",
+      "    } while (threshold<0)",
+      "}"
+    ],
+    "A": "0",
+    "B": "10",
+    "C": "9",
+    "D": "1",
+    "Ans": "D"
+  }
+]

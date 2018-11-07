@@ -1,0 +1,41 @@
+[
+  {
+    "id":7,
+    "topic":"if Expression",
+    "section":1,
+    "title":"Traditional Usage of if...else",
+    "content":[
+      "In the following syntax, if executes a certain section of code if the testExpression is evaluated to true. It can have optional else clause. Codes inside else clause are executed if the testExpression is false."
+      ],
+    "code": [
+      "if (testExpression) {",
+      "   // codes to run if testExpression is true",
+      "}",
+      "else {",
+      "  // codes to run if testExpression is false",
+      "}"
+    ],
+    "highlight": "N"
+  },
+
+  {
+    "id":7,
+    "topic":"if Expression",
+    "section":2,
+    "title":"Kotlin if expression",
+    "content":[
+      "Unlike Java (and other many programming languages), \"if\" can be used an expression in Kotlin; it returns a value."
+      ],
+    "code": [
+      "fun main(args: Array<String>) {",
+      "    val number = -10",
+      "    val result = if (number > 0) {",
+      "        \"Positive number\"",
+      "     } else {",
+      "        \"Negative number\"",
+      "     }",
+      "}"
+    ],
+    "highlight": "The \"else\" branch is mandatory when using if as an expression."
+  }
+]

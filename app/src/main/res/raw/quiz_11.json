@@ -1,0 +1,43 @@
+[
+  {
+    "Qn": "How many times will the following for loop be executed if we run the program?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "    for (i in 1..10) {",
+      "        if (i == 5) {",
+      "            break",
+      "        }",
+      "        println(i)",
+      "    }",
+      "}"
+    ],
+    "A": "10",
+    "B": "5",
+    "C": "4",
+    "D": "1",
+    "Ans": "B"
+  },
+
+  {
+    "Qn": "How many times will the outer for loop(@first) be executed?",
+    "Code": [
+      "fun main(args: Array<String>) {",
+      "    ",
+      "    first@ for (i in 1..4) {",
+      "    ",
+      "        second@ for (j in 1..2) {",
+      "            println(\"i = $i; j = $j\")",
+      "            if (i == 2)",
+      "                break@second",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "A": "4",
+    "B": "8",
+    "C": "7",
+    "D": "2",
+    "Ans": "C"
+  }
+]

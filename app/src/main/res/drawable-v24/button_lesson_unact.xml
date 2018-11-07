@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <size android:width="150dp" android:height="150dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/learn_unact"
+        android:width="35dp"
+        android:height="35dp"
+        android:gravity="center"/>
+
+</layer-list>
