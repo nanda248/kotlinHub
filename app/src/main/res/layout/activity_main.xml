@@ -33,56 +33,56 @@
         android:layout_weight="4"
         android:orientation="vertical">
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_login_email"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="vertical">
-                <EditText
-                    android:id="@+id/et_login_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:textColorHint="@color/darkGrey"
-                    android:textColor="@color/black"
-                    android:backgroundTint="@color/dark_green"
-                    android:hint="@string/tf_email"/>
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_green"
+                android:ems="10"
+                android:hint="@string/tf_email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkGrey" />
 
-                <EditText
-                    android:id="@+id/et_login_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPassword"
-                    android:textColorHint="@color/darkGrey"
-                    android:textColor="@color/black"
-                    android:backgroundTint="@color/dark_green"
-                    android:hint="@string/tf_password"/>
+            <EditText
+                android:id="@+id/et_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_green"
+                android:ems="10"
+                android:hint="@string/tf_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkGrey" />
 
-                <Button
-                    android:id="@+id/btn_login"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="40dp"
-                    android:background="@color/gold"
-                    android:text="@string/btn_log_in"
-                    android:textColor="@color/black"
-                    tools:layout_editor_absoluteX="147dp"
-                    tools:layout_editor_absoluteY="177dp" />
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/gold"
+                android:text="@string/btn_log_in"
+                android:textColor="@color/black"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="177dp" />
 
-                <TextView
-                    android:id="@+id/registerNewAccount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:clickable="true"
-                    android:textColor="@color/royalBlue"
-                    android:text="@string/txt_register" />
+            <TextView
+                android:id="@+id/registerNewAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:text="@string/txt_register"
+                android:textColor="@color/royalBlue" />
 
 
-
-            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="4"
                 android:padding="70dp"
-                app:srcCompat="@drawable/tutorialpoint_logo" />
+                app:srcCompat="@drawable/programiz_logo" />
         </LinearLayout>
 
 
