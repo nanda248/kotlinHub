@@ -104,7 +104,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
     }
 
     fun showPopupModal() {
-        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val inflater:LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.popup_layout_locked, null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
 
@@ -126,8 +126,11 @@ class ActivityBasicConcepts : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 500
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Complete the previous modules to unlock this one!")
+        tv.setText("Complete the previous topics to unlock this one!")
         val btnPopup = view.findViewById<Button>(R.id.btn_ok)
 
         // Set a click listener for popup's button widget

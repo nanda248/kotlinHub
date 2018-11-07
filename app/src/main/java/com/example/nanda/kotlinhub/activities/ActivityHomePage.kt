@@ -158,6 +158,9 @@ class ActivityHomePage : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 500
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Complete the previous modules to unlock this one!")
         val btnPopup = view.findViewById<Button>(R.id.btn_ok)

@@ -175,8 +175,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.45"
-        android:textAlignment="center"
-        android:text="@string/tv_congrats"/>
+        android:textAlignment="center"/>
 
 
     <LinearLayout

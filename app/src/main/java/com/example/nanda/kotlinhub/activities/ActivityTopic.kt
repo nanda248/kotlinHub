@@ -126,6 +126,9 @@ class ActivityTopic : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 500
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Congratulation! You have completed this topic. Do you want to take the quiz now?")
         val btnLater = view.findViewById<Button>(R.id.btn_later)
@@ -179,6 +182,9 @@ class ActivityTopic : AppCompatActivity() {
             popupWindow.exitTransition = slideOut
 
         }
+
+        popupWindow.width = 750
+        popupWindow.height = 500
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Well done! You have completed this topic!")

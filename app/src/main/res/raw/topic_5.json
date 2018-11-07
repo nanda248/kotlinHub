@@ -28,7 +28,7 @@
     "title":"Kotlin Statements",
     "content":[
       "Statements are everything that make up a complete unit of execution.",
-      "Here, \"90 + 25\" is an expression that returns 115, and \"val score = 90 + 25;\" is a statement.",
+      "Here, \"90 + 25\" is an expression that returns 115, and \"val score = 90 + 25;\" is a statement."
     ],
     "code": [
       "val score = 90 + 25"
