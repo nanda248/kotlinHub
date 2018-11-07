@@ -1,6 +1,7 @@
 package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -24,6 +25,7 @@ class ActivityTopic : AppCompatActivity() {
 
         var topicFile = intent.getStringExtra("topicFile")
         var topicNum = intent.getIntExtra("topicNum", 1)
+
 
         var jsonHelper = JSONHelper(topicFile, this)
         var topic: ArrayList<Section> = jsonHelper.parse()
@@ -60,7 +62,7 @@ class ActivityTopic : AppCompatActivity() {
                     userDBHelper.updateProgress(topicNum, username)
                 }
                 if(hasQuiz == true) {
-                    showPopupModalQuiz()
+                    showPopupModalQuiz(topicNum)
                 } else {
                     showPopupModalNoQuiz()
                 }
@@ -101,7 +103,7 @@ class ActivityTopic : AppCompatActivity() {
         }
     }
 
-    fun showPopupModalQuiz() {
+    fun showPopupModalQuiz(topicNum: Int) {
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.popup_layout_with_quiz, null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
@@ -131,6 +133,9 @@ class ActivityTopic : AppCompatActivity() {
 
         btnYes.setOnClickListener {
             // Go to Quiz page (remove the line below)
+            val myIntent = Intent(this, ActivityQuiz::class.java)
+            myIntent.putExtra("quizFile", "quiz_"+topicNum)
+            startActivity(myIntent)
             popupWindow.dismiss()
         }
 

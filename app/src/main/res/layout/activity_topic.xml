@@ -84,7 +84,7 @@
         android:layout_weight="0.8"
         android:layout_margin="8dp"
         android:text="@string/btn_next"
-        android:textColor="@color/black"
-        android:background="@color/gold"/>
+        android:textColor="@color/white"
+        android:background="@color/green"/>
 
 </LinearLayout>
