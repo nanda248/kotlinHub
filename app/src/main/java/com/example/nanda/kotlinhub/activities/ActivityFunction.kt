@@ -86,7 +86,11 @@ class ActivityFunction : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
 
+    override fun onBackPressed() {
+        val myIntent = Intent(this, ActivityHomePage::class.java)
+        startActivity(myIntent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

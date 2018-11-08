@@ -137,9 +137,10 @@ class ActivityFlowControl : AppCompatActivity() {
         return true
     }
 
-//    override fun onBackPressed() {
-//        // Do Here what ever you want do on back press;
-//    }
+    override fun onBackPressed() {
+        val myIntent = Intent(this, ActivityHomePage::class.java)
+        startActivity(myIntent)
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
