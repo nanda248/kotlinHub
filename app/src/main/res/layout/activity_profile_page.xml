@@ -20,10 +20,11 @@
 
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView_profile_photo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:clickable="true"
             android:src="@drawable/user_img" />
 
         <LinearLayout
