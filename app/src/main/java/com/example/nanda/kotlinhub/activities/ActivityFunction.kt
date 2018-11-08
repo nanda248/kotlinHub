@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_home_page.*
 class ActivityFunction : AppCompatActivity() {
 
     lateinit var userDBHelper: UserDBHelper
+    val REQUEST_CODE : Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +50,7 @@ class ActivityFunction : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_13")
                 myIntent.putExtra("topicNum", 13)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -63,7 +64,7 @@ class ActivityFunction : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_14")
                 myIntent.putExtra("topicNum", 14)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -77,7 +78,7 @@ class ActivityFunction : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_15")
                 myIntent.putExtra("topicNum", 15)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
     }
@@ -86,6 +87,24 @@ class ActivityFunction : AppCompatActivity() {
         onBackPressed()
         return true
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        this.checkCompleted()
+    }
+
+    fun checkCompleted() {
+        userDBHelper = UserDBHelper(this)
+        var progress = userDBHelper.getProgress()
+
+        val btnFun = findViewById<Button>(R.id.btn_topic13)
+        val btnInfix = findViewById<Button>(R.id.btn_topic14)
+        val btnRecursion = findViewById<Button>(R.id.btn_topic15)
+
+        if(progress>12){btnFun.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>13){btnInfix.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>14){btnRecursion.setBackgroundResource(R.drawable.checked_icon)}
     }
 
     fun showPopupModal() {

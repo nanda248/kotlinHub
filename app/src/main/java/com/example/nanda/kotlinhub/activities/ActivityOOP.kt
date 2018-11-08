@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_home_page.*
 class ActivityOOP : AppCompatActivity() {
 
     lateinit var userDBHelper: UserDBHelper
+    val REQUEST_CODE : Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +60,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_16")
                 myIntent.putExtra("topicNum", 16)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -73,7 +74,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_17")
                 myIntent.putExtra("topicNum", 17)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -87,7 +88,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_18")
                 myIntent.putExtra("topicNum", 18)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -101,7 +102,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_19")
                 myIntent.putExtra("topicNum", 19)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -115,7 +116,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_20")
                 myIntent.putExtra("topicNum", 20)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -129,7 +130,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_21")
                 myIntent.putExtra("topicNum", 21)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -143,7 +144,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_22")
                 myIntent.putExtra("topicNum", 22)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -157,7 +158,7 @@ class ActivityOOP : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_23")
                 myIntent.putExtra("topicNum", 23)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -166,7 +167,34 @@ class ActivityOOP : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        this.checkCompleted()
+    }
+
+    fun checkCompleted() {
+        userDBHelper = UserDBHelper(this)
+        var progress = userDBHelper.getProgress()
+
+        val btnCO = findViewById<Button>(R.id.btn_topic16)
+        val btnConstructor = findViewById<Button>(R.id.btn_topic17)
+        val btnInheritance = findViewById<Button>(R.id.btn_topic18)
+        val btnAbstract = findViewById<Button>(R.id.btn_topic19)
+        val btnInterface = findViewById<Button>(R.id.btn_topic20)
+        val btnData = findViewById<Button>(R.id.btn_topic21)
+        val btnSealed = findViewById<Button>(R.id.btn_topic22)
+        val btnCompanion = findViewById<Button>(R.id.btn_topic23)
+
+        if(progress>15){btnCO.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>16){btnConstructor.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>17){btnInheritance.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>18){btnAbstract.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>19){btnInterface.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>20){btnData.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>21){btnSealed.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>22){btnCompanion.setBackgroundResource(R.drawable.checked_icon)}
     }
 
     fun showPopupModal() {

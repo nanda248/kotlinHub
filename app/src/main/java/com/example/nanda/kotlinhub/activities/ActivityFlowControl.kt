@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_home_page.*
 class ActivityFlowControl : AppCompatActivity() {
 
     lateinit var userDBHelper: UserDBHelper
+    val REQUEST_CODE : Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +56,7 @@ class ActivityFlowControl : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_7")
                 myIntent.putExtra("topicNum", 7)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -69,7 +70,7 @@ class ActivityFlowControl : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_8")
                 myIntent.putExtra("topicNum", 8)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -83,7 +84,7 @@ class ActivityFlowControl : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_9")
                 myIntent.putExtra("topicNum", 9)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -97,7 +98,7 @@ class ActivityFlowControl : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_10")
                 myIntent.putExtra("topicNum", 10)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -111,7 +112,7 @@ class ActivityFlowControl : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_11")
                 myIntent.putExtra("topicNum", 11)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -125,7 +126,7 @@ class ActivityFlowControl : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_12")
                 myIntent.putExtra("topicNum", 12)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -134,7 +135,34 @@ class ActivityFlowControl : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
 
+//    override fun onBackPressed() {
+//        // Do Here what ever you want do on back press;
+//    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        this.checkCompleted()
+    }
+
+    fun checkCompleted() {
+        userDBHelper = UserDBHelper(this)
+        var progress = userDBHelper.getProgress()
+
+        val btnIf = findViewById<Button>(R.id.btn_topic7)
+        val btnWhen = findViewById<Button>(R.id.btn_topic8)
+        val btnWhile = findViewById<Button>(R.id.btn_topic9)
+        val btnFor = findViewById<Button>(R.id.btn_topic10)
+        val btnBreak = findViewById<Button>(R.id.btn_topic11)
+        val btnContinue = findViewById<Button>(R.id.btn_topic12)
+
+        if(progress>6){btnIf.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>7){btnWhen.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>8){btnWhile.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>9){btnFor.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>10){btnBreak.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>11){btnContinue.setBackgroundResource(R.drawable.checked_icon)}
     }
 
     fun showPopupModal() {

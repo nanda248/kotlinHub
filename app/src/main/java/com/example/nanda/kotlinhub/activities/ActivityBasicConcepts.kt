@@ -1,6 +1,5 @@
 package com.example.nanda.kotlinhub.activities
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -55,7 +54,6 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 myIntent.putExtra("topicFile", "topic_1")
                 myIntent.putExtra("topicNum", 1)
                 startActivityForResult(myIntent, REQUEST_CODE)
-
         }
 
         btnBasicType.setOnClickListener {
@@ -129,6 +127,17 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        this.checkCompleted()
+    }
+
     fun checkCompleted() {
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
@@ -146,21 +155,6 @@ class ActivityBasicConcepts : AppCompatActivity() {
         if(progress>3){btnTypeConvertion.setBackgroundResource(R.drawable.checked_icon)}
         if(progress>4){btnES.setBackgroundResource(R.drawable.checked_icon)}
         if(progress>5){btnComment.setBackgroundResource(R.drawable.checked_icon)}
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        this.checkCompleted()
-        if(requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            this.checkCompleted()
-        }
     }
 
     fun showPopupModal() {
