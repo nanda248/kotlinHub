@@ -25,6 +25,9 @@ class ActivityOOP : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oop)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
@@ -38,6 +41,9 @@ class ActivityOOP : AppCompatActivity() {
         val btnCompanion = findViewById<Button>(R.id.btn_topic23)
 
         btnCO.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<15) {
                 showPopupModal()
             }else {
@@ -49,6 +55,9 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         btnConstructor.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<16) {
                 showPopupModal()
             }else {
@@ -60,6 +69,9 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         btnInheritance.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<17) {
                 showPopupModal()
             }else {
@@ -71,6 +83,9 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         btnAbstract.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<18) {
                 showPopupModal()
             }else {
@@ -82,6 +97,9 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         btnInterface.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<19) {
                 showPopupModal()
             }else {
@@ -93,6 +111,9 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         btnData.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<20) {
                 showPopupModal()
             }else {
@@ -104,6 +125,9 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         btnSealed.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<21) {
                 showPopupModal()
             }else {
@@ -115,6 +139,9 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         btnCompanion.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<22) {
                 showPopupModal()
             }else {
@@ -124,6 +151,12 @@ class ActivityOOP : AppCompatActivity() {
                 startActivity(myIntent)
             }
         }
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
 
     }
 
@@ -150,8 +183,11 @@ class ActivityOOP : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 450
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Complete the previous modules to unlock this one!")
+        tv.setText("Complete the previous topics to unlock this one!")
         val btnPopup = view.findViewById<Button>(R.id.btn_ok)
 
         // Set a click listener for popup's button widget

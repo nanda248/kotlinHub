@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pureWhite"
+    android:id="@+id/home_layout"
     android:orientation="vertical"
     tools:context=".activities.ActivityOOP">
 
@@ -58,7 +60,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/overview"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic16"
@@ -86,7 +88,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/basic_type"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic17"
@@ -114,7 +116,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/flow_control"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic18"
@@ -142,7 +144,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic19"
@@ -170,7 +172,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic20"
@@ -198,7 +200,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic21"
@@ -226,7 +228,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic22"
@@ -254,7 +256,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/oop"/>
 
                 <Button
                     android:id="@+id/btn_topic23"

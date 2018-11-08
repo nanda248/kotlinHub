@@ -25,6 +25,9 @@ class ActivityFlowControl : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flow_control)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
@@ -36,6 +39,9 @@ class ActivityFlowControl : AppCompatActivity() {
         val btnContinue = findViewById<Button>(R.id.btn_topic12)
 
         btnIf.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<6) {
                 showPopupModal()
             }else {
@@ -47,6 +53,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnWhen.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<7) {
                 showPopupModal()
             }else {
@@ -58,6 +67,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnWhile.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<8) {
                 showPopupModal()
             }else {
@@ -69,6 +81,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnFor.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<9) {
                 showPopupModal()
             }else {
@@ -80,6 +95,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnBreak.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<10) {
                 showPopupModal()
             }else {
@@ -91,6 +109,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnContinue.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<11) {
                 showPopupModal()
             }else {
@@ -100,6 +121,12 @@ class ActivityFlowControl : AppCompatActivity() {
                 startActivity(myIntent)
             }
         }
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
 
     }
 
@@ -126,8 +153,11 @@ class ActivityFlowControl : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 400
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Complete the previous modules to unlock this one!")
+        tv.setText("Complete the previous topics to unlock this one!")
         val btnPopup = view.findViewById<Button>(R.id.btn_ok)
 
         // Set a click listener for popup's button widget

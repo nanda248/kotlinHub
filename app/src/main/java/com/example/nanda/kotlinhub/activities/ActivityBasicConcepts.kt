@@ -25,6 +25,9 @@ class ActivityBasicConcepts : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_concepts)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
@@ -46,6 +49,8 @@ class ActivityBasicConcepts : AppCompatActivity() {
 
         btnBasicType.setOnClickListener {
 
+            progress = userDBHelper.getProgress()
+
             if(progress<1) {
                 showPopupModal()
             }else {
@@ -57,6 +62,8 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
 
         btnOperators.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
 
             if(progress<2) {
                 showPopupModal()
@@ -70,6 +77,8 @@ class ActivityBasicConcepts : AppCompatActivity() {
 
         btnTypeConvertion.setOnClickListener {
 
+            progress = userDBHelper.getProgress()
+
             if(progress<3) {
                 showPopupModal()
             }else {
@@ -81,6 +90,9 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
 
         btnES.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<4) {
                 showPopupModal()
             }else {
@@ -92,6 +104,9 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
 
         btnComment.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<5) {
                 showPopupModal()
             }else {
@@ -103,8 +118,14 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+
+    }
+
     fun showPopupModal() {
-        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val inflater:LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.popup_layout_locked, null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
 
@@ -126,8 +147,11 @@ class ActivityBasicConcepts : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 450
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Complete the previous modules to unlock this one!")
+        tv.setText("Complete the previous topics to unlock this one!")
         val btnPopup = view.findViewById<Button>(R.id.btn_ok)
 
         // Set a click listener for popup's button widget

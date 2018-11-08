@@ -27,19 +27,20 @@ class ActivityHomePage : AppCompatActivity() {
         val btnFC = findViewById<ImageButton>(R.id.btn_class_object)
         val btnFunction = findViewById<ImageButton>(R.id.btn_function)
         val btnOOP = findViewById<ImageButton>(R.id.btn_miscellaneous)
-        val test = findViewById<Button>(R.id.test)
         val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
         val btnProfilePage = findViewById<ImageButton>(R.id.btn_profile_page)
+        val tvTree = findViewById<TextView>(R.id.tv_tree)
 
         val progBar1 = findViewById<ProgressBar>(R.id.progressBar1)
         val progBar2 = findViewById<ProgressBar>(R.id.progressBar2)
         val progBar3 = findViewById<ProgressBar>(R.id.progressBar3)
         val progBar4 = findViewById<ProgressBar>(R.id.progressBar4)
+        val progBar5 = findViewById<ProgressBar>(R.id.progressBar5)
 
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
-        test.text = progress.toString()
+        progBar5.setProgress(progress)
 
         if(progress in 1..5){
 
@@ -72,6 +73,8 @@ class ActivityHomePage : AppCompatActivity() {
             btnFC.setBackgroundResource(R.drawable.activate_stage1)
             btnFunction.setBackgroundResource(R.drawable.activate_stage1)
             btnOOP.setBackgroundResource(R.drawable.activate_stage1)
+            tvTree.text = "You're almost there!"
+
 
         }else if(progress == 23){
 
@@ -84,6 +87,7 @@ class ActivityHomePage : AppCompatActivity() {
             btnFunction.setBackgroundResource(R.drawable.activate_stage1)
             btnOOP.setBackgroundResource(R.drawable.activate_stage1)
             btn_success.setBackgroundResource(R.drawable.activate_stage2)
+            tvTree.text = "Congratulations!"
 
         }
 
@@ -164,6 +168,9 @@ class ActivityHomePage : AppCompatActivity() {
             popupWindow.exitTransition = slideOut
 
         }
+
+        popupWindow.width = 750
+        popupWindow.height = 450
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Complete the previous modules to unlock this one!")

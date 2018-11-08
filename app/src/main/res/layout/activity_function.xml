@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:id="@+id/home_layout"
+    android:background="@color/pureWhite"
     tools:context=".activities.ActivityFunction">
 
     <LinearLayout
@@ -59,7 +60,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/overview"/>
+                    android:src="@drawable/basic_type"/>
 
                 <Button
                     android:id="@+id/btn_topic13"
@@ -115,7 +116,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/flow_control"/>
+                    android:src="@drawable/basic_type"/>
 
                 <Button
                     android:id="@+id/btn_topic15"

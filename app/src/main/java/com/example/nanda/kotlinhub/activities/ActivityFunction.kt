@@ -25,6 +25,9 @@ class ActivityFunction : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_function)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
@@ -33,6 +36,9 @@ class ActivityFunction : AppCompatActivity() {
         val btnRecursion = findViewById<Button>(R.id.btn_topic15)
 
         btnFun.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<12) {
                 showPopupModal()
             }else {
@@ -44,6 +50,9 @@ class ActivityFunction : AppCompatActivity() {
         }
 
         btnInfix.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<13) {
                 showPopupModal()
             }else {
@@ -55,6 +64,9 @@ class ActivityFunction : AppCompatActivity() {
         }
 
         btnRecursion.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<14) {
                 showPopupModal()
             }else {
@@ -64,6 +76,12 @@ class ActivityFunction : AppCompatActivity() {
                 startActivity(myIntent)
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+
     }
 
     fun showPopupModal() {
@@ -89,8 +107,11 @@ class ActivityFunction : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 450
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
-        tv.setText("Complete the previous modules to unlock this one!")
+        tv.setText("Complete the previous topics to unlock this one!")
         val btnPopup = view.findViewById<Button>(R.id.btn_ok)
 
         // Set a click listener for popup's button widget

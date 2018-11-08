@@ -1,6 +1,7 @@
 package com.example.nanda.kotlinhub.activities
 
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -22,8 +23,12 @@ class ActivityTopic : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topic)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         var topicFile = intent.getStringExtra("topicFile")
         var topicNum = intent.getIntExtra("topicNum", 1)
+
 
         var jsonHelper = JSONHelper(topicFile, this)
         var topic: ArrayList<Section> = jsonHelper.parse()
@@ -60,7 +65,7 @@ class ActivityTopic : AppCompatActivity() {
                     userDBHelper.updateProgress(topicNum, username)
                 }
                 if(hasQuiz == true) {
-                    showPopupModalQuiz()
+                    showPopupModalQuiz(topicNum)
                 } else {
                     showPopupModalNoQuiz()
                 }
@@ -70,20 +75,30 @@ class ActivityTopic : AppCompatActivity() {
 
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+
+    }
+
     private fun displaySection(section: Section){
 
         val content = section.getContent()
         val code = section.getCode()
         val title = section.getSectionTitle()
+        val highlight: String = section.getHighlight()
 
         var contentString = ""
         for(i in 0 until content.size-1){
             contentString = contentString + content[i] + "\n" + "\n"
         }
-        contentString = contentString + content[content.size-1] + "\n"
+        contentString = contentString + content[content.size-1]
 
         val tvTitle = findViewById<TextView>(R.id.tv_title)
         val tvContent = findViewById<TextView>(R.id.tv_content)
+        val tvHighlight = findViewById<TextView>(R.id.tv_highlight)
+        tvHighlight.text = ""
+        tvHighlight.setBackgroundResource(0)
 
         tvTitle.text = title
         tvContent.text = contentString
@@ -99,9 +114,15 @@ class ActivityTopic : AppCompatActivity() {
             tvCode.text = codeString
             tvCode.setBackgroundResource(R.drawable.code_border)
         }
+
+        if(highlight.length>0){
+            tvHighlight.text = "!!Note: " + highlight
+            tvHighlight.setBackgroundResource(R.drawable.highlight_bg)
+        }
+
     }
 
-    fun showPopupModalQuiz() {
+    fun showPopupModalQuiz(topicNum: Int) {
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.popup_layout_with_quiz, null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
@@ -124,6 +145,9 @@ class ActivityTopic : AppCompatActivity() {
 
         }
 
+        popupWindow.width = 750
+        popupWindow.height = 500
+
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Congratulation! You have completed this topic. Do you want to take the quiz now?")
         val btnLater = view.findViewById<Button>(R.id.btn_later)
@@ -131,6 +155,9 @@ class ActivityTopic : AppCompatActivity() {
 
         btnYes.setOnClickListener {
             // Go to Quiz page (remove the line below)
+            val myIntent = Intent(this, ActivityQuiz::class.java)
+            myIntent.putExtra("quizFile", "quiz_"+topicNum)
+            startActivity(myIntent)
             popupWindow.dismiss()
         }
 
@@ -174,6 +201,9 @@ class ActivityTopic : AppCompatActivity() {
             popupWindow.exitTransition = slideOut
 
         }
+
+        popupWindow.width = 750
+        popupWindow.height = 500
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Well done! You have completed this topic!")

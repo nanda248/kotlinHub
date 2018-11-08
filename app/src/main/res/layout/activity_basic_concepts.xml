@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/pureWhite"
     tools:context=".activities.ActivityBasicConcepts">
 
 
@@ -87,7 +89,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/basic_type"/>
+                    android:src="@drawable/overview"/>
 
                 <Button
                     android:id="@+id/btn_topic2"
@@ -115,7 +117,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/flow_control"/>
+                    android:src="@drawable/overview"/>
 
                 <Button
                     android:id="@+id/btn_topic3"
@@ -143,7 +145,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/overview"/>
 
                 <Button
                     android:id="@+id/btn_topic4"
@@ -171,7 +173,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/overview"/>
 
                 <Button
                     android:id="@+id/btn_topic5"
@@ -199,7 +201,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/visibility"/>
+                    android:src="@drawable/overview"/>
 
                 <Button
                     android:id="@+id/btn_topic6"
