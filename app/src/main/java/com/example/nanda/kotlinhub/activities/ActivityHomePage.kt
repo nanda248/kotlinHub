@@ -11,6 +11,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.*
 import com.example.nanda.kotlinhub.R
+import com.example.nanda.kotlinhub.R.id.btn_success
 import com.example.nanda.kotlinhub.helper.UserDBHelper
 import kotlinx.android.synthetic.main.activity_home_page.*
 

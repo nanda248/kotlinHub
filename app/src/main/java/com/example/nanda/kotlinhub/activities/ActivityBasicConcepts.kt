@@ -1,5 +1,6 @@
 package com.example.nanda.kotlinhub.activities
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -20,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_home_page.*
 class ActivityBasicConcepts : AppCompatActivity() {
 
     lateinit var userDBHelper: UserDBHelper
+    val REQUEST_CODE : Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +54,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_1")
                 myIntent.putExtra("topicNum", 1)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
 
         }
 
@@ -66,7 +68,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_2")
                 myIntent.putExtra("topicNum", 2)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -80,7 +82,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_3")
                 myIntent.putExtra("topicNum", 3)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -94,7 +96,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_4")
                 myIntent.putExtra("topicNum", 4)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -108,7 +110,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_5")
                 myIntent.putExtra("topicNum", 5)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
 
@@ -122,15 +124,43 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 val myIntent = Intent(this, ActivityTopic()::class.java)
                 myIntent.putExtra("topicFile", "topic_6")
                 myIntent.putExtra("topicNum", 6)
-                startActivity(myIntent)
+                startActivityForResult(myIntent, REQUEST_CODE)
             }
         }
+    }
+
+    fun checkCompleted() {
+        userDBHelper = UserDBHelper(this)
+        var progress = userDBHelper.getProgress()
+
+        val btnOverview = findViewById<Button>(R.id.btn_topic1)
+        val btnBasicType = findViewById<Button>(R.id.btn_topic2)
+        val btnOperators = findViewById<Button>(R.id.btn_topic3)
+        val btnTypeConvertion = findViewById<Button>(R.id.btn_topic4)
+        val btnES = findViewById<Button>(R.id.btn_topic5)
+        val btnComment = findViewById<Button>(R.id.btn_topic6)
+
+        if(progress>0){btnOverview.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>1){btnBasicType.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>2){btnOperators.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>3){btnTypeConvertion.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>4){btnES.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>5){btnComment.setBackgroundResource(R.drawable.checked_icon)}
     }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        this.checkCompleted()
+        if(requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            this.checkCompleted()
+        }
     }
 
     fun showPopupModal() {

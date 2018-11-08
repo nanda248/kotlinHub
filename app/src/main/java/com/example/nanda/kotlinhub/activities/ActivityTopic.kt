@@ -1,5 +1,6 @@
 package com.example.nanda.kotlinhub.activities
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -11,6 +12,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.*
 import com.example.nanda.kotlinhub.R
+import com.example.nanda.kotlinhub.R.id.topic_layout
 import com.example.nanda.kotlinhub.helper.JSONHelper
 import com.example.nanda.kotlinhub.helper.Section
 import com.example.nanda.kotlinhub.helper.UserDBHelper
@@ -220,16 +222,18 @@ class ActivityTopic : AppCompatActivity() {
         // Set a dismiss listener for popup window
         popupWindow.setOnDismissListener {
             Toast.makeText(applicationContext,"Good Job", Toast.LENGTH_SHORT).show()
-            val basicConceptIntent = Intent(this, ActivityBasicConcepts::class.java)
-            val flowControlIntent = Intent(this, ActivityFlowControl::class.java)
-            val functionsIntent = Intent(this, ActivityFunction::class.java)
-            val oopIntent = Intent(this, ActivityOOP::class.java)
-
+//            val basicConceptIntent = Intent(this, ActivityBasicConcepts::class.java)
+//            val flowControlIntent = Intent(this, ActivityFlowControl::class.java)
+//            val functionsIntent = Intent(this, ActivityFunction::class.java)
+//            val oopIntent = Intent(this, ActivityOOP::class.java)
+            val myIntent = Intent()
+            myIntent.putExtra("refresh", true)
+            setResult(Activity.RESULT_OK, myIntent)
             finish()
-            if(progress<7){ startActivity(basicConceptIntent)}
-            if(progress<13){ startActivity(flowControlIntent)}
-            if(progress<16){ startActivity(functionsIntent)}
-            if(progress<24){ startActivity(oopIntent)}
+//            if(progress<7){ startActivity(basicConceptIntent)}
+//            if(progress<13){ startActivity(flowControlIntent)}
+//            if(progress<16){ startActivity(functionsIntent)}
+//            if(progress<24){ startActivity(oopIntent)}
         }
 
         TransitionManager.beginDelayedTransition(topic_layout)
