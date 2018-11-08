@@ -183,6 +183,13 @@
     </RelativeLayout>
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:textAlignment="center"
+        android:text="@string/tv_overall_progress"/>
+
+    <TextView
         android:id="@+id/tv_tree"
         android:layout_width="match_parent"
         android:layout_height="0dp"

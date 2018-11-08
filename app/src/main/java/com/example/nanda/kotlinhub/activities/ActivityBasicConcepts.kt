@@ -31,12 +31,21 @@ class ActivityBasicConcepts : AppCompatActivity() {
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
+
         val btnOverview = findViewById<Button>(R.id.btn_topic1)
         val btnBasicType = findViewById<Button>(R.id.btn_topic2)
         val btnOperators = findViewById<Button>(R.id.btn_topic3)
         val btnTypeConvertion = findViewById<Button>(R.id.btn_topic4)
         val btnES = findViewById<Button>(R.id.btn_topic5)
         val btnComment = findViewById<Button>(R.id.btn_topic6)
+
+        if(progress>0){btnOverview.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>1){btnBasicType.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>2){btnOperators.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>3){btnTypeConvertion.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>4){btnES.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>5){btnComment.setBackgroundResource(R.drawable.checked_icon)}
+
 
         btnOverview.setOnClickListener {
 

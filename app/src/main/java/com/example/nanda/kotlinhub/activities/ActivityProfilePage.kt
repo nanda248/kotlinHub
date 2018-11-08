@@ -46,7 +46,7 @@ class ActivityProfilePage : AppCompatActivity() {
 
         val tv_progress = findViewById<TextView>(R.id.tv_progress)
         val progress = userDBHelper.getProgress()
-        val progress_str = "Progress: " + progress.toString()
+        val progress_str = "Progress: " + progress.toString() + " topics completed"
         tv_progress.setText(progress_str)
 
         val tv_email_field = findViewById<TextView>(R.id.tv_email_field)

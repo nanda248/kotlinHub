@@ -38,6 +38,13 @@ class ActivityFlowControl : AppCompatActivity() {
         val btnBreak = findViewById<Button>(R.id.btn_topic11)
         val btnContinue = findViewById<Button>(R.id.btn_topic12)
 
+        if(progress>6){btnIf.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>7){btnWhen.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>8){btnWhile.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>9){btnFor.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>10){btnBreak.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>11){btnContinue.setBackgroundResource(R.drawable.checked_icon)}
+
         btnIf.setOnClickListener {
 
             progress = userDBHelper.getProgress()

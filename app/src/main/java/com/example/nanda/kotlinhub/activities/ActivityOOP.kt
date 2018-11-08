@@ -40,6 +40,15 @@ class ActivityOOP : AppCompatActivity() {
         val btnSealed = findViewById<Button>(R.id.btn_topic22)
         val btnCompanion = findViewById<Button>(R.id.btn_topic23)
 
+        if(progress>15){btnCO.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>16){btnConstructor.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>17){btnInheritance.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>18){btnAbstract.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>19){btnInterface.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>20){btnData.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>21){btnSealed.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>22){btnCompanion.setBackgroundResource(R.drawable.checked_icon)}
+
         btnCO.setOnClickListener {
 
             progress = userDBHelper.getProgress()

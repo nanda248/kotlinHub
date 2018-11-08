@@ -134,12 +134,6 @@ class ActivityHomePage : AppCompatActivity() {
             }
         }
 
-        test.setOnClickListener {
-            val myIntent = Intent(this, ActivityQuiz::class.java)
-            myIntent.putExtra("quizFile", "quiz_3")
-            startActivity(myIntent)
-        }
-
     }
 
     override fun onBackPressed() {

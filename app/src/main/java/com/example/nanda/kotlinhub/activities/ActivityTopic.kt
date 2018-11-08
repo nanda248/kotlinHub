@@ -183,6 +183,7 @@ class ActivityTopic : AppCompatActivity() {
         val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.popup_layout, null)
         val popupWindow = PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        val progress = userDBHelper.getProgress()
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             popupWindow.elevation = 10.0F
@@ -219,7 +220,16 @@ class ActivityTopic : AppCompatActivity() {
         // Set a dismiss listener for popup window
         popupWindow.setOnDismissListener {
             Toast.makeText(applicationContext,"Good Job", Toast.LENGTH_SHORT).show()
+            val basicConceptIntent = Intent(this, ActivityBasicConcepts::class.java)
+            val flowControlIntent = Intent(this, ActivityFlowControl::class.java)
+            val functionsIntent = Intent(this, ActivityFunction::class.java)
+            val oopIntent = Intent(this, ActivityOOP::class.java)
+
             finish()
+            if(progress<7){ startActivity(basicConceptIntent)}
+            if(progress<13){ startActivity(flowControlIntent)}
+            if(progress<16){ startActivity(functionsIntent)}
+            if(progress<24){ startActivity(oopIntent)}
         }
 
         TransitionManager.beginDelayedTransition(topic_layout)

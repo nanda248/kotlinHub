@@ -35,6 +35,10 @@ class ActivityFunction : AppCompatActivity() {
         val btnInfix = findViewById<Button>(R.id.btn_topic14)
         val btnRecursion = findViewById<Button>(R.id.btn_topic15)
 
+        if(progress>12){btnFun.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>13){btnInfix.setBackgroundResource(R.drawable.checked_icon)}
+        if(progress>14){btnRecursion.setBackgroundResource(R.drawable.checked_icon)}
+
         btnFun.setOnClickListener {
 
             progress = userDBHelper.getProgress()
