@@ -25,6 +25,9 @@ class ActivityBasicConcepts : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_concepts)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
@@ -113,6 +116,12 @@ class ActivityBasicConcepts : AppCompatActivity() {
                 startActivity(myIntent)
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+
     }
 
     fun showPopupModal() {

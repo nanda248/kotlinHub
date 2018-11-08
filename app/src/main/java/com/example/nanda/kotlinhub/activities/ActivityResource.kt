@@ -14,6 +14,9 @@ class ActivityResource : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resource)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         //https://www.youtube.com/watch?v=0isrdp5meyQ&t=7s
         val cardKotlin1 = findViewById<CardView>(R.id.card_kotlin_1)
         cardKotlin1.setOnClickListener {
@@ -64,6 +67,12 @@ class ActivityResource : AppCompatActivity() {
         cardKotlin10.setOnClickListener {
             this.openYoutubeLink("9XmGh4WgfSg")
         }
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
 
     }
 

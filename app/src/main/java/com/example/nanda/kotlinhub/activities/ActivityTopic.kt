@@ -23,6 +23,9 @@ class ActivityTopic : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topic)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         var topicFile = intent.getStringExtra("topicFile")
         var topicNum = intent.getIntExtra("topicNum", 1)
 
@@ -69,6 +72,12 @@ class ActivityTopic : AppCompatActivity() {
             }
         }
 
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
 
     }
 

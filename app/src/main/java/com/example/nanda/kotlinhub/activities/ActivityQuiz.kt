@@ -16,6 +16,9 @@ class ActivityQuiz : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         var quizFile = intent.getStringExtra("quizFile")
 
         var quizHelper = JSONQuizHelper(quizFile, this)
@@ -139,6 +142,12 @@ class ActivityQuiz : AppCompatActivity() {
 
                 })
 
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
 
     }
 

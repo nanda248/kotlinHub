@@ -25,6 +25,9 @@ class ActivityOOP : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oop)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
@@ -148,6 +151,12 @@ class ActivityOOP : AppCompatActivity() {
                 startActivity(myIntent)
             }
         }
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
 
     }
 

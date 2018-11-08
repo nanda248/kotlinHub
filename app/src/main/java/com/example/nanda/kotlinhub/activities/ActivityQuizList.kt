@@ -12,6 +12,9 @@ class ActivityQuizList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_list)
 
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         val btn1 = findViewById<Button>(R.id.btn_quiz1)
         val btn2 = findViewById<Button>(R.id.btn_quiz2)
         val btn3 = findViewById<Button>(R.id.btn_quiz3)
@@ -145,6 +148,12 @@ class ActivityQuizList : AppCompatActivity() {
             myIntent.putExtra("quizFile", "quiz_23")
             startActivity(myIntent)
         }
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
 
     }
 }
