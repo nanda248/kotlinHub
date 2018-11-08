@@ -28,6 +28,7 @@ class ActivityHomePage : AppCompatActivity() {
         val btnOOP = findViewById<ImageButton>(R.id.btn_miscellaneous)
         val btnLessonPage = findViewById<ImageButton>(R.id.btn_lesson_page)
         val btnProfilePage = findViewById<ImageButton>(R.id.btn_profile_page)
+        val tvTree = findViewById<TextView>(R.id.tv_tree)
 
         val progBar1 = findViewById<ProgressBar>(R.id.progressBar1)
         val progBar2 = findViewById<ProgressBar>(R.id.progressBar2)
@@ -71,6 +72,8 @@ class ActivityHomePage : AppCompatActivity() {
             btnFC.setBackgroundResource(R.drawable.activate_stage1)
             btnFunction.setBackgroundResource(R.drawable.activate_stage1)
             btnOOP.setBackgroundResource(R.drawable.activate_stage1)
+            tvTree.text = "You're almost there!"
+
 
         }else if(progress == 23){
 
@@ -83,6 +86,7 @@ class ActivityHomePage : AppCompatActivity() {
             btnFunction.setBackgroundResource(R.drawable.activate_stage1)
             btnOOP.setBackgroundResource(R.drawable.activate_stage1)
             btn_success.setBackgroundResource(R.drawable.activate_stage2)
+            tvTree.text = "Congratulations!"
 
         }
 

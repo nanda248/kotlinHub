@@ -33,6 +33,9 @@ class ActivityFunction : AppCompatActivity() {
         val btnRecursion = findViewById<Button>(R.id.btn_topic15)
 
         btnFun.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<12) {
                 showPopupModal()
             }else {
@@ -44,6 +47,9 @@ class ActivityFunction : AppCompatActivity() {
         }
 
         btnInfix.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<13) {
                 showPopupModal()
             }else {
@@ -55,6 +61,9 @@ class ActivityFunction : AppCompatActivity() {
         }
 
         btnRecursion.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<14) {
                 showPopupModal()
             }else {

@@ -36,6 +36,9 @@ class ActivityFlowControl : AppCompatActivity() {
         val btnContinue = findViewById<Button>(R.id.btn_topic12)
 
         btnIf.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<6) {
                 showPopupModal()
             }else {
@@ -47,6 +50,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnWhen.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<7) {
                 showPopupModal()
             }else {
@@ -58,6 +64,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnWhile.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<8) {
                 showPopupModal()
             }else {
@@ -69,6 +78,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnFor.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<9) {
                 showPopupModal()
             }else {
@@ -80,6 +92,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnBreak.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<10) {
                 showPopupModal()
             }else {
@@ -91,6 +106,9 @@ class ActivityFlowControl : AppCompatActivity() {
         }
 
         btnContinue.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<11) {
                 showPopupModal()
             }else {

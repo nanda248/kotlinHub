@@ -78,7 +78,10 @@ class JSONHelper(var fileName: String, var c: Context) {
                         code.add(codeArray.getString(i))
                 }
 
-                val highlight = jo.getString("highlight")
+                var highlight = jo.getString("highlight")
+                if(highlight == "N"){
+                    highlight = ""
+                }
 
                 section = Section(id, topicName, sectionNum, title, content, code, highlight)
                 topic.add(section)

@@ -77,15 +77,19 @@ class ActivityTopic : AppCompatActivity() {
         val content = section.getContent()
         val code = section.getCode()
         val title = section.getSectionTitle()
+        val highlight: String = section.getHighlight()
 
         var contentString = ""
         for(i in 0 until content.size-1){
             contentString = contentString + content[i] + "\n" + "\n"
         }
-        contentString = contentString + content[content.size-1] + "\n"
+        contentString = contentString + content[content.size-1]
 
         val tvTitle = findViewById<TextView>(R.id.tv_title)
         val tvContent = findViewById<TextView>(R.id.tv_content)
+        val tvHighlight = findViewById<TextView>(R.id.tv_highlight)
+        tvHighlight.text = ""
+        tvHighlight.setBackgroundResource(0)
 
         tvTitle.text = title
         tvContent.text = contentString
@@ -101,6 +105,12 @@ class ActivityTopic : AppCompatActivity() {
             tvCode.text = codeString
             tvCode.setBackgroundResource(R.drawable.code_border)
         }
+
+        if(highlight.length>0){
+            tvHighlight.text = "!!Note: " + highlight
+            tvHighlight.setBackgroundResource(R.drawable.highlight_bg)
+        }
+
     }
 
     fun showPopupModalQuiz(topicNum: Int) {
