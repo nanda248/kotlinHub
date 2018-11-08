@@ -46,6 +46,8 @@ class ActivityBasicConcepts : AppCompatActivity() {
 
         btnBasicType.setOnClickListener {
 
+            progress = userDBHelper.getProgress()
+
             if(progress<1) {
                 showPopupModal()
             }else {
@@ -57,6 +59,8 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
 
         btnOperators.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
 
             if(progress<2) {
                 showPopupModal()
@@ -70,6 +74,8 @@ class ActivityBasicConcepts : AppCompatActivity() {
 
         btnTypeConvertion.setOnClickListener {
 
+            progress = userDBHelper.getProgress()
+
             if(progress<3) {
                 showPopupModal()
             }else {
@@ -81,6 +87,9 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
 
         btnES.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<4) {
                 showPopupModal()
             }else {
@@ -92,6 +101,9 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
 
         btnComment.setOnClickListener {
+
+            progress = userDBHelper.getProgress()
+
             if(progress<5) {
                 showPopupModal()
             }else {
@@ -127,7 +139,7 @@ class ActivityBasicConcepts : AppCompatActivity() {
         }
 
         popupWindow.width = 750
-        popupWindow.height = 500
+        popupWindow.height = 450
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Complete the previous topics to unlock this one!")

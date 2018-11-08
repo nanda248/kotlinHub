@@ -151,7 +151,7 @@ class ActivityOOP : AppCompatActivity() {
         }
 
         popupWindow.width = 750
-        popupWindow.height = 500
+        popupWindow.height = 450
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Complete the previous topics to unlock this one!")

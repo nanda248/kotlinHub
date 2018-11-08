@@ -33,10 +33,12 @@ class ActivityHomePage : AppCompatActivity() {
         val progBar2 = findViewById<ProgressBar>(R.id.progressBar2)
         val progBar3 = findViewById<ProgressBar>(R.id.progressBar3)
         val progBar4 = findViewById<ProgressBar>(R.id.progressBar4)
+        val progBar5 = findViewById<ProgressBar>(R.id.progressBar5)
 
         userDBHelper = UserDBHelper(this)
         var progress = userDBHelper.getProgress()
 
+        progBar5.setProgress(progress)
 
         if(progress in 1..5){
 
@@ -159,7 +161,7 @@ class ActivityHomePage : AppCompatActivity() {
         }
 
         popupWindow.width = 750
-        popupWindow.height = 500
+        popupWindow.height = 450
 
         val tv = view.findViewById<TextView>(R.id.tv_poopup_text)
         tv.setText("Complete the previous modules to unlock this one!")
